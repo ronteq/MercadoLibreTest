@@ -146,7 +146,7 @@ extension AmountViewController {
     
     @objc
     private func nextPressed() {
-        print("NEXT!")
+        viewModel.nextButtonPressed()
     }
     
 }

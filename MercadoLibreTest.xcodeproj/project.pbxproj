@@ -10,6 +10,8 @@
 		06FCC9BB0FC4FD9CEA603047 /* Pods_MercadoLibreTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A69599F5956419DAA467D54 /* Pods_MercadoLibreTest.framework */; };
 		4C31B19A220F8F0D00D58FE3 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B199220F8F0D00D58FE3 /* LoaderButton.swift */; };
 		4C31B19C220F90FC00D58FE3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B19B220F90FC00D58FE3 /* UIViewControllerExtensions.swift */; };
+		4C31B19F220F94DF00D58FE3 /* SetPaymentCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B19E220F94DF00D58FE3 /* SetPaymentCardViewController.swift */; };
+		4C31B1A1220F956000D58FE3 /* SetPaymentCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1A0220F956000D58FE3 /* SetPaymentCardViewModel.swift */; };
 		4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */; };
 		4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF93220F77F60044DDD2 /* Assets.xcassets */; };
 		4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF95220F77F60044DDD2 /* LaunchScreen.storyboard */; };
@@ -38,6 +40,8 @@
 		4A69599F5956419DAA467D54 /* Pods_MercadoLibreTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLibreTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C31B199220F8F0D00D58FE3 /* LoaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
 		4C31B19B220F90FC00D58FE3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		4C31B19E220F94DF00D58FE3 /* SetPaymentCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPaymentCardViewController.swift; sourceTree = "<group>"; };
+		4C31B1A0220F956000D58FE3 /* SetPaymentCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPaymentCardViewModel.swift; sourceTree = "<group>"; };
 		4C97FF89220F77F50044DDD2 /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97FF93220F77F60044DDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 				4A69599F5956419DAA467D54 /* Pods_MercadoLibreTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C31B19D220F948300D58FE3 /* SetPaymentCard */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B19E220F94DF00D58FE3 /* SetPaymentCardViewController.swift */,
+				4C31B1A0220F956000D58FE3 /* SetPaymentCardViewModel.swift */,
+			);
+			path = SetPaymentCard;
 			sourceTree = "<group>";
 		};
 		4C97FF80220F77F40044DDD2 = {
@@ -164,6 +177,7 @@
 			children = (
 				4C97FFAD220F7A7E0044DDD2 /* Coordinators */,
 				4C97FFC3220F7F870044DDD2 /* SetAmount */,
+				4C31B19D220F948300D58FE3 /* SetPaymentCard */,
 			);
 			path = MakePayment;
 			sourceTree = "<group>";
@@ -389,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C97FFD6220F820B0044DDD2 /* Payment.swift in Sources */,
+				4C31B19F220F94DF00D58FE3 /* SetPaymentCardViewController.swift in Sources */,
 				4C31B19A220F8F0D00D58FE3 /* LoaderButton.swift in Sources */,
 				4C97FFBA220F7BE20044DDD2 /* StringExtensions.swift in Sources */,
 				4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */,
@@ -405,6 +420,7 @@
 				4C97FFC7220F800E0044DDD2 /* CellProtocol.swift in Sources */,
 				4C97FFA1220F78F40044DDD2 /* Coordinator.swift in Sources */,
 				4C97FFC2220F7E820044DDD2 /* PaymentsViewController.swift in Sources */,
+				4C31B1A1220F956000D58FE3 /* SetPaymentCardViewModel.swift in Sources */,
 				4C97FFA9220F79700044DDD2 /* ViewModel.swift in Sources */,
 				4C97FFDA220F89C10044DDD2 /* AmountViewModel.swift in Sources */,
 				4C97FFA3220F79070044DDD2 /* RootViewCoordinator.swift in Sources */,

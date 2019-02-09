@@ -44,14 +44,24 @@ extension MakePaymentCoordinator {
         navigationController.viewControllers = [amountController]
     }
     
+    func showSetPaymentController() {
+        let setPaymentViewModel = SetPaymentCardViewModel()
+        let setPaymentController = SetPaymentCardViewController(viewModel: setPaymentViewModel)
+        navigationController.pushViewController(setPaymentController, animated: true)
+    }
+    
 }
 
 // MARK: - AmountViewModelDelegate
 
 extension MakePaymentCoordinator: AmountViewModelDelegate {
     
-    func amountViewModelDidFinish(_ amountViewModel: AmountViewModel) {
+    func amountViewModelDidCancel(_ amountViewModel: AmountViewModel) {
         delegate?.makePaymentCoordinatorDidFinish(self)
+    }
+    
+    func amountViewModelNextDidPressed(_ amountViewModel: AmountViewModel) {
+        showSetPaymentController()
     }
     
 }
