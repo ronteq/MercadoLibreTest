@@ -20,12 +20,13 @@ class AmountViewController: UIViewController {
         return label
     }()
     
-    private let amountTextField: UITextField = {
+    private lazy var amountTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "amount_placeholder".localized()
         textField.keyboardType = .numberPad
         textField.borderStyle = .roundedRect
+        textField.addTarget(self, action: #selector(amountChange), for: .editingChanged)
         return textField
     }()
     
@@ -33,6 +34,7 @@ class AmountViewController: UIViewController {
         let button = LoaderButton(type: .system)
         button.setTitle("next".localized(), for: .normal)
         button.addTarget(self, action: #selector(nextPressed), for: .touchUpInside)
+        button.shouldEnable = false
         return button
     }()
     
@@ -61,6 +63,7 @@ extension AmountViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
+        setupViewModel()
     }
     
 }
@@ -118,11 +121,28 @@ extension AmountViewController {
         }
     }
     
+    private func setupViewModel() {
+        viewModel.nextButtonShouldEnable = { [weak self] shouldEnable in
+            self?.nextButton.shouldEnable = shouldEnable
+        }
+    }
+    
 }
 
 // MARK: - Handler methods
 
 extension AmountViewController {
+    
+    @objc
+    private func amountChange() {
+        guard let amount = amountTextField.text,
+            !amount.isEmpty else {
+                viewModel.setAmount(to: 0)
+                return
+        }
+        
+        viewModel.setAmount(to: Int(amount) ?? 0)
+    }
     
     @objc
     private func nextPressed() {

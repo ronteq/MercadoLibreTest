@@ -28,10 +28,6 @@ class PaymentsViewModel: ViewModel {
         return payments.count
     }
     
-    func makePayment() {
-        delegate?.paymentsViewModelDidPressedAddButton(self)
-    }
-    
 }
 
 // MARK: - Helper methods
@@ -40,6 +36,10 @@ extension PaymentsViewModel {
     
     func cellViewModel(for indexPath: IndexPath) -> PaymentCellViewModel {
         return PaymentCellViewModel(payment: payments[indexPath.row])
+    }
+    
+    func makePayment() {
+        delegate?.paymentsViewModelDidPressedAddButton(self)
     }
     
 }

@@ -18,6 +18,12 @@ class LoaderButton: UIButton {
     }()
     
     var title: String?
+    var shouldEnable: Bool = true {
+        didSet {
+            alpha = shouldEnable ? 1.0 : 0.5
+            isEnabled = shouldEnable
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
