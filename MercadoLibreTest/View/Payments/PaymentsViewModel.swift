@@ -15,7 +15,7 @@ class PaymentsViewModel: ViewModel {
         Payment(),
         Payment(),
         Payment(),
-        Payment(),
+        Payment()
     ]
     
     var totalPayments: Int {
