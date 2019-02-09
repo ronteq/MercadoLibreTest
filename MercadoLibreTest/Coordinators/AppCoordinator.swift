@@ -24,14 +24,14 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator {
     
     func start() {
-        showMoviesController()
+        showPaymentsController()
     }
     
-    private func showMoviesController() {
-        let amountCoordinator = AmountCoordinator()
-        amountCoordinator.start()
-        addChildCoordinator(childCoordinator: amountCoordinator)
-        window.rootViewController = amountCoordinator.rootViewController
+    private func showPaymentsController() {
+        let paymentsCoordinator = PaymentsCoordinator()
+        paymentsCoordinator.start()
+        addChildCoordinator(childCoordinator: paymentsCoordinator)
+        window.rootViewController = paymentsCoordinator.rootViewController
         window.makeKeyAndVisible()
     }
     

@@ -19,6 +19,15 @@
 		4C97FFB4220F7B560044DDD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FFB6220F7B560044DDD2 /* Localizable.strings */; };
 		4C97FFBA220F7BE20044DDD2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFB9220F7BE20044DDD2 /* StringExtensions.swift */; };
 		4C97FFBC220F7BF60044DDD2 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFBB220F7BF60044DDD2 /* ColorExtensions.swift */; };
+		4C97FFC0220F7E6E0044DDD2 /* PaymentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFBF220F7E6E0044DDD2 /* PaymentsCoordinator.swift */; };
+		4C97FFC2220F7E820044DDD2 /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFC1220F7E820044DDD2 /* PaymentsViewController.swift */; };
+		4C97FFC7220F800E0044DDD2 /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFC6220F800E0044DDD2 /* CellProtocol.swift */; };
+		4C97FFCA220F80370044DDD2 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFC8220F80370044DDD2 /* PaymentTableViewCell.swift */; };
+		4C97FFCB220F80370044DDD2 /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FFC9220F80370044DDD2 /* PaymentTableViewCell.xib */; };
+		4C97FFCD220F80960044DDD2 /* PaymentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFCC220F80960044DDD2 /* PaymentCellViewModel.swift */; };
+		4C97FFCF220F81190044DDD2 /* PaymentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFCE220F81190044DDD2 /* PaymentsViewModel.swift */; };
+		4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */; };
+		4C97FFD6220F820B0044DDD2 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFD5220F820B0044DDD2 /* Payment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +47,15 @@
 		4C97FFB7220F7B5A0044DDD2 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4C97FFB9220F7BE20044DDD2 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		4C97FFBB220F7BF60044DDD2 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		4C97FFBF220F7E6E0044DDD2 /* PaymentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsCoordinator.swift; sourceTree = "<group>"; };
+		4C97FFC1220F7E820044DDD2 /* PaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
+		4C97FFC6220F800E0044DDD2 /* CellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		4C97FFC8220F80370044DDD2 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		4C97FFC9220F80370044DDD2 /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
+		4C97FFCC220F80960044DDD2 /* PaymentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCellViewModel.swift; sourceTree = "<group>"; };
+		4C97FFCE220F81190044DDD2 /* PaymentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewModel.swift; sourceTree = "<group>"; };
+		4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
+		4C97FFD5220F820B0044DDD2 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +90,7 @@
 			children = (
 				4C97FF9E220F78BB0044DDD2 /* Resources */,
 				4C97FFA6220F793E0044DDD2 /* Core */,
+				4C97FFD0220F815A0044DDD2 /* Commons */,
 				4C97FF9F220F78E60044DDD2 /* Coordinators */,
 				4C97FFA7220F79590044DDD2 /* View */,
 				4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */,
@@ -102,6 +121,7 @@
 		4C97FFA6220F793E0044DDD2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4C97FFC5220F80030044DDD2 /* Protocols */,
 				4C97FFB8220F7BD80044DDD2 /* Extensions */,
 				4C97FFB0220F7B090044DDD2 /* Localizable */,
 			);
@@ -111,19 +131,20 @@
 		4C97FFA7220F79590044DDD2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4C97FFAA220F7A310044DDD2 /* Amount */,
+				4C97FFBD220F7E500044DDD2 /* Payments */,
+				4C97FFAA220F7A310044DDD2 /* MakePayment */,
 				4C97FFA8220F79700044DDD2 /* ViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		4C97FFAA220F7A310044DDD2 /* Amount */ = {
+		4C97FFAA220F7A310044DDD2 /* MakePayment */ = {
 			isa = PBXGroup;
 			children = (
 				4C97FFAD220F7A7E0044DDD2 /* Coordinators */,
-				4C97FFAB220F7A550044DDD2 /* AmountViewController.swift */,
+				4C97FFC3220F7F870044DDD2 /* SetAmount */,
 			);
-			path = Amount;
+			path = MakePayment;
 			sourceTree = "<group>";
 		};
 		4C97FFAD220F7A7E0044DDD2 /* Coordinators */ = {
@@ -149,6 +170,76 @@
 				4C97FFBB220F7BF60044DDD2 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C97FFBD220F7E500044DDD2 /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				4C97FFD4220F82010044DDD2 /* Models */,
+				4C97FFC4220F7FF20044DDD2 /* Cells */,
+				4C97FFBE220F7E570044DDD2 /* Coordinators */,
+				4C97FFC1220F7E820044DDD2 /* PaymentsViewController.swift */,
+				4C97FFCE220F81190044DDD2 /* PaymentsViewModel.swift */,
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		4C97FFBE220F7E570044DDD2 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				4C97FFBF220F7E6E0044DDD2 /* PaymentsCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		4C97FFC3220F7F870044DDD2 /* SetAmount */ = {
+			isa = PBXGroup;
+			children = (
+				4C97FFAB220F7A550044DDD2 /* AmountViewController.swift */,
+			);
+			path = SetAmount;
+			sourceTree = "<group>";
+		};
+		4C97FFC4220F7FF20044DDD2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C97FFCC220F80960044DDD2 /* PaymentCellViewModel.swift */,
+				4C97FFC8220F80370044DDD2 /* PaymentTableViewCell.swift */,
+				4C97FFC9220F80370044DDD2 /* PaymentTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4C97FFC5220F80030044DDD2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4C97FFC6220F800E0044DDD2 /* CellProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4C97FFD0220F815A0044DDD2 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				4C97FFD1220F81630044DDD2 /* Views */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		4C97FFD1220F81630044DDD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C97FFD4220F82010044DDD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C97FFD5220F820B0044DDD2 /* Payment.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +303,7 @@
 			files = (
 				4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */,
 				4C97FFB4220F7B560044DDD2 /* Localizable.strings in Resources */,
+				4C97FFCB220F80370044DDD2 /* PaymentTableViewCell.xib in Resources */,
 				4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,13 +315,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C97FFD6220F820B0044DDD2 /* Payment.swift in Sources */,
 				4C97FFBA220F7BE20044DDD2 /* StringExtensions.swift in Sources */,
+				4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */,
 				4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */,
 				4C97FFAF220F7A8C0044DDD2 /* AmountCoordinator.swift in Sources */,
+				4C97FFC0220F7E6E0044DDD2 /* PaymentsCoordinator.swift in Sources */,
 				4C97FFA5220F79200044DDD2 /* AppCoordinator.swift in Sources */,
 				4C97FFAC220F7A550044DDD2 /* AmountViewController.swift in Sources */,
+				4C97FFCA220F80370044DDD2 /* PaymentTableViewCell.swift in Sources */,
+				4C97FFCD220F80960044DDD2 /* PaymentCellViewModel.swift in Sources */,
 				4C97FFBC220F7BF60044DDD2 /* ColorExtensions.swift in Sources */,
+				4C97FFCF220F81190044DDD2 /* PaymentsViewModel.swift in Sources */,
+				4C97FFC7220F800E0044DDD2 /* CellProtocol.swift in Sources */,
 				4C97FFA1220F78F40044DDD2 /* Coordinator.swift in Sources */,
+				4C97FFC2220F7E820044DDD2 /* PaymentsViewController.swift in Sources */,
 				4C97FFA9220F79700044DDD2 /* ViewModel.swift in Sources */,
 				4C97FFA3220F79070044DDD2 /* RootViewCoordinator.swift in Sources */,
 			);
@@ -384,6 +484,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = V8B4THN48A;
 				INFOPLIST_FILE = MercadoLibreTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +504,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MercadoLibreTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

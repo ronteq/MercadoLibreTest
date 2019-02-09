@@ -12,5 +12,8 @@
 "no_internet" = "No internet connection, please try again later";
 "error_button" = "Try again";
 
+// MARK: - PaymentsViewController
+"payments_title" = "Payments";
+
 // MARK: - AmountViewController
 "amount_title" = "Amount";

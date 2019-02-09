@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AmountCoordinator: Coordinator, RootViewCoordinator {
+class MakePaymentCoordinator: Coordinator, RootViewCoordinator {
     
     var childCoordinators: [Coordinator] = []
     
@@ -25,7 +25,7 @@ class AmountCoordinator: Coordinator, RootViewCoordinator {
 
 // MARK: - Initialization
 
-extension AmountCoordinator {
+extension MakePaymentCoordinator {
     
     func start() {
         let amountController = AmountViewController()
