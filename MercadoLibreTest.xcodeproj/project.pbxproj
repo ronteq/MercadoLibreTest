@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		06FCC9BB0FC4FD9CEA603047 /* Pods_MercadoLibreTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A69599F5956419DAA467D54 /* Pods_MercadoLibreTest.framework */; };
+		4C31B19A220F8F0D00D58FE3 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B199220F8F0D00D58FE3 /* LoaderButton.swift */; };
+		4C31B19C220F90FC00D58FE3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B19B220F90FC00D58FE3 /* UIViewControllerExtensions.swift */; };
 		4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */; };
 		4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF93220F77F60044DDD2 /* Assets.xcassets */; };
 		4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF95220F77F60044DDD2 /* LaunchScreen.storyboard */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		4A69599F5956419DAA467D54 /* Pods_MercadoLibreTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLibreTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C31B199220F8F0D00D58FE3 /* LoaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
+		4C31B19B220F90FC00D58FE3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		4C97FF89220F77F50044DDD2 /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97FF93220F77F60044DDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 			children = (
 				4C97FFB9220F7BE20044DDD2 /* StringExtensions.swift */,
 				4C97FFBB220F7BF60044DDD2 /* ColorExtensions.swift */,
+				4C31B19B220F90FC00D58FE3 /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */,
+				4C31B199220F8F0D00D58FE3 /* LoaderButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C97FFD6220F820B0044DDD2 /* Payment.swift in Sources */,
+				4C31B19A220F8F0D00D58FE3 /* LoaderButton.swift in Sources */,
 				4C97FFBA220F7BE20044DDD2 /* StringExtensions.swift in Sources */,
 				4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */,
 				4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */,
@@ -393,6 +400,7 @@
 				4C97FFCA220F80370044DDD2 /* PaymentTableViewCell.swift in Sources */,
 				4C97FFCD220F80960044DDD2 /* PaymentCellViewModel.swift in Sources */,
 				4C97FFBC220F7BF60044DDD2 /* ColorExtensions.swift in Sources */,
+				4C31B19C220F90FC00D58FE3 /* UIViewControllerExtensions.swift in Sources */,
 				4C97FFCF220F81190044DDD2 /* PaymentsViewModel.swift in Sources */,
 				4C97FFC7220F800E0044DDD2 /* CellProtocol.swift in Sources */,
 				4C97FFA1220F78F40044DDD2 /* Coordinator.swift in Sources */,
