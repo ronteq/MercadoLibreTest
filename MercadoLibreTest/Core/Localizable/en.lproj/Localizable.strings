@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  MercadoLibreTest
+
+  Created by Daniel Fernandez on 2/9/19.
+  Copyright © 2019 ronteq. All rights reserved.
+*/
+
+// MARK: - General
+"no_response" = "No data to process";
+"no_results" = "No results for now";
+"no_internet" = "No internet connection, please try again later";
+"error_button" = "Try again";
+
+// MARK: - AmountViewController
+"amount_title" = "Amount";
