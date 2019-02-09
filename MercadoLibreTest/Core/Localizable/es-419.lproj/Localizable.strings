@@ -11,6 +11,7 @@
 "no_results" = "Por ahora no hay resultados";
 "no_internet" = "Sin internet, trata nuevamente más tarde";
 "error_button" = "Intenta de nuevo";
+"cancel" = "Cancelar";
 
 // MARK: - PaymentsViewController
 "payments_title" = "Pagos realizados";

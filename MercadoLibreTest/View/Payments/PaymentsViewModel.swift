@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol PaymentsViewModelDelegate: class {
+    func paymentsViewModelDidPressedAddButton(_ paymentsViewModel: PaymentsViewModel)
+}
+
 class PaymentsViewModel: ViewModel {
     
     private var payments: [Payment] = [
@@ -18,8 +22,14 @@ class PaymentsViewModel: ViewModel {
         Payment()
     ]
     
+    weak var delegate: PaymentsViewModelDelegate?
+    
     var totalPayments: Int {
         return payments.count
+    }
+    
+    func makePayment() {
+        delegate?.paymentsViewModelDidPressedAddButton(self)
     }
     
 }

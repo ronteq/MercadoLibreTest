@@ -54,6 +54,7 @@ extension PaymentsViewController {
         title = "payments_title".localized()
         view.backgroundColor = .customGray
         setupTableView()
+        setupAddBarButton()
     }
     
     private func setupTableView() {
@@ -62,6 +63,16 @@ extension PaymentsViewController {
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    private func setupAddBarButton() {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPayment))
+        navigationItem.rightBarButtonItems = [addButton]
+    }
+    
+    @objc
+    private func addPayment() {
+        viewModel.makePayment()
     }
     
 }

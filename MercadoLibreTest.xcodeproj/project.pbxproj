@@ -16,7 +16,7 @@
 		4C97FFA5220F79200044DDD2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFA4220F79200044DDD2 /* AppCoordinator.swift */; };
 		4C97FFA9220F79700044DDD2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFA8220F79700044DDD2 /* ViewModel.swift */; };
 		4C97FFAC220F7A550044DDD2 /* AmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFAB220F7A550044DDD2 /* AmountViewController.swift */; };
-		4C97FFAF220F7A8C0044DDD2 /* AmountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFAE220F7A8C0044DDD2 /* AmountCoordinator.swift */; };
+		4C97FFAF220F7A8C0044DDD2 /* MakePaymentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFAE220F7A8C0044DDD2 /* MakePaymentCoordinator.swift */; };
 		4C97FFB4220F7B560044DDD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FFB6220F7B560044DDD2 /* Localizable.strings */; };
 		4C97FFBA220F7BE20044DDD2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFB9220F7BE20044DDD2 /* StringExtensions.swift */; };
 		4C97FFBC220F7BF60044DDD2 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFBB220F7BF60044DDD2 /* ColorExtensions.swift */; };
@@ -29,6 +29,7 @@
 		4C97FFCF220F81190044DDD2 /* PaymentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFCE220F81190044DDD2 /* PaymentsViewModel.swift */; };
 		4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */; };
 		4C97FFD6220F820B0044DDD2 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFD5220F820B0044DDD2 /* Payment.swift */; };
+		4C97FFDA220F89C10044DDD2 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFD9220F89C10044DDD2 /* AmountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,7 @@
 		4C97FFA4220F79200044DDD2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4C97FFA8220F79700044DDD2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4C97FFAB220F7A550044DDD2 /* AmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewController.swift; sourceTree = "<group>"; };
-		4C97FFAE220F7A8C0044DDD2 /* AmountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountCoordinator.swift; sourceTree = "<group>"; };
+		4C97FFAE220F7A8C0044DDD2 /* MakePaymentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePaymentCoordinator.swift; sourceTree = "<group>"; };
 		4C97FFB3220F7B440044DDD2 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4C97FFB5220F7B560044DDD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C97FFB7220F7B5A0044DDD2 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		4C97FFCE220F81190044DDD2 /* PaymentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewModel.swift; sourceTree = "<group>"; };
 		4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
 		4C97FFD5220F820B0044DDD2 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		4C97FFD9220F89C10044DDD2 /* AmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModel.swift; sourceTree = "<group>"; };
 		6A119B8B59A1F62B4EB4B1C7 /* Pods-MercadoLibreTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLibreTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLibreTest/Pods-MercadoLibreTest.debug.xcconfig"; sourceTree = "<group>"; };
 		FA31B41BAFEDCD6CB44453FC /* Pods-MercadoLibreTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLibreTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLibreTest/Pods-MercadoLibreTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,7 +167,7 @@
 		4C97FFAD220F7A7E0044DDD2 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				4C97FFAE220F7A8C0044DDD2 /* AmountCoordinator.swift */,
+				4C97FFAE220F7A8C0044DDD2 /* MakePaymentCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				4C97FFAB220F7A550044DDD2 /* AmountViewController.swift */,
+				4C97FFD9220F89C10044DDD2 /* AmountViewModel.swift */,
 			);
 			path = SetAmount;
 			sourceTree = "<group>";
@@ -383,7 +386,7 @@
 				4C97FFBA220F7BE20044DDD2 /* StringExtensions.swift in Sources */,
 				4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */,
 				4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */,
-				4C97FFAF220F7A8C0044DDD2 /* AmountCoordinator.swift in Sources */,
+				4C97FFAF220F7A8C0044DDD2 /* MakePaymentCoordinator.swift in Sources */,
 				4C97FFC0220F7E6E0044DDD2 /* PaymentsCoordinator.swift in Sources */,
 				4C97FFA5220F79200044DDD2 /* AppCoordinator.swift in Sources */,
 				4C97FFAC220F7A550044DDD2 /* AmountViewController.swift in Sources */,
@@ -395,6 +398,7 @@
 				4C97FFA1220F78F40044DDD2 /* Coordinator.swift in Sources */,
 				4C97FFC2220F7E820044DDD2 /* PaymentsViewController.swift in Sources */,
 				4C97FFA9220F79700044DDD2 /* ViewModel.swift in Sources */,
+				4C97FFDA220F89C10044DDD2 /* AmountViewModel.swift in Sources */,
 				4C97FFA3220F79070044DDD2 /* RootViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

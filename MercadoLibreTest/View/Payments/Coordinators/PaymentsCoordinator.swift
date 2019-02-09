@@ -34,8 +34,38 @@ extension PaymentsCoordinator {
     
     func start() {
         let paymentsViewModel = PaymentsViewModel()
+        paymentsViewModel.delegate = self
         let paymentsController = PaymentsViewController(viewModel: paymentsViewModel)
         navigationController.viewControllers = [paymentsController]
+    }
+    
+    func showMakePaymentCoordinator() {
+        let makePaymentCoordinator = MakePaymentCoordinator()
+        makePaymentCoordinator.start()
+        makePaymentCoordinator.delegate = self
+        addChildCoordinator(childCoordinator: makePaymentCoordinator)
+        rootViewController.present(makePaymentCoordinator.rootViewController, animated: true, completion: nil)
+    }
+    
+}
+
+// MARK: - PaymentsViewModelDelegate
+
+extension PaymentsCoordinator: PaymentsViewModelDelegate {
+    
+    func paymentsViewModelDidPressedAddButton(_ paymentsViewModel: PaymentsViewModel) {
+        showMakePaymentCoordinator()
+    }
+    
+}
+
+// MARK: - MakePaymentCoordinatorDelegate
+
+extension PaymentsCoordinator: MakePaymentCoordinatorDelegate {
+    
+    func makePaymentCoordinatorDidFinish(_ makePaymentCoordinator: MakePaymentCoordinator) {
+        makePaymentCoordinator.rootViewController.dismiss(animated: true, completion: nil)
+        removeChildCoordinator(childCoordinator: makePaymentCoordinator)
     }
     
 }

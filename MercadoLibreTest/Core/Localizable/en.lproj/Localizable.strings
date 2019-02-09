@@ -11,6 +11,7 @@
 "no_results" = "No results for now";
 "no_internet" = "No internet connection, please try again later";
 "error_button" = "Try again";
+"cancel" = "Cancel";
 
 // MARK: - PaymentsViewController
 "payments_title" = "Payments";
