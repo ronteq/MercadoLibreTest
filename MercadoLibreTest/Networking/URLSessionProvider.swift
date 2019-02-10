@@ -21,7 +21,7 @@ final class URLSessionProvider: ProviderProtocol {
         session.dataTask(request: request) { [weak self]  data, response, error in
             let httpResponse = response as? HTTPURLResponse
             self?.handleDataResponse(data: data, response: httpResponse, error: error, completion: completion)
-            }.resume()
+        }.resume()
     }
     
     private func handleDataResponse<T: Decodable>(data: Data?, response: HTTPURLResponse?, error: Error?, completion: (NetworkResponse<T>) -> Void) {

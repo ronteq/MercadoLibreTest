@@ -1,14 +1,14 @@
 //
-//  AmountViewController.swift
+//  SetInstallmentsViewController.swift
 //  MercadoLibreTest
 //
-//  Created by Daniel Fernandez on 2/9/19.
+//  Created by Daniel Fernandez on 2/10/19.
 //  Copyright © 2019 ronteq. All rights reserved.
 //
 
 import UIKit
 
-class AmountViewController: UIViewController {
+class SetInstallmentsViewController: UIViewController, Alertable {
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
@@ -20,27 +20,35 @@ class AmountViewController: UIViewController {
         return label
     }()
     
-    private lazy var amountTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "amount_placeholder".localized()
-        textField.keyboardType = .numberPad
-        textField.borderStyle = .roundedRect
-        textField.addTarget(self, action: #selector(amountChange), for: .editingChanged)
-        return textField
+    private let installmentsLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .darkGray
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.text = "1"
+        return label
+    }()
+    
+    private let stepper: UIStepper = {
+        let stepper = UIStepper()
+        stepper.translatesAutoresizingMaskIntoConstraints = false
+        stepper.minimumValue = 1
+        stepper.isContinuous = true
+        stepper.tintColor = .orange
+        stepper.addTarget(self, action: #selector(setInstallments), for: .valueChanged)
+        return stepper
     }()
     
     private lazy var nextButton: LoaderButton = {
         let button = LoaderButton(type: .system)
-        button.setTitle("next".localized(), for: .normal)
+        button.setTitle("make_payment".localized(), for: .normal)
         button.addTarget(self, action: #selector(nextPressed), for: .touchUpInside)
-        button.shouldEnable = false
         return button
     }()
     
-    private let viewModel: AmountViewModel
+    private let viewModel: SetInstallmentsViewModel
     
-    init(viewModel: AmountViewModel) {
+    init(viewModel: SetInstallmentsViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -53,7 +61,7 @@ class AmountViewController: UIViewController {
 
 // MARK: - Life cycle
 
-extension AmountViewController {
+extension SetInstallmentsViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,21 +73,15 @@ extension AmountViewController {
 
 // MARK: - Initial setup
 
-extension AmountViewController {
+extension SetInstallmentsViewController {
     
     private func initialSetup() {
         view.backgroundColor = .customGray
-        title = "amount_title".localized()
-        addCancelButton()
+        title = "set_installments_title".localized()
         setupDescriptionLabel()
-        setupAmountTextField()
+        setupInstallmentsLabel()
         setupNextButton()
         addGestureToHideKeyboad()
-    }
-    
-    private func addCancelButton() {
-        let cancelButton = UIBarButtonItem(title: "cancel".localized(), style: .done, target: self, action: #selector(cancelPayment))
-        navigationItem.leftBarButtonItems = [cancelButton]
     }
     
     private func setupDescriptionLabel() {
@@ -96,12 +98,18 @@ extension AmountViewController {
         
     }
     
-    private func setupAmountTextField() {
-        view.addSubview(amountTextField)
-        amountTextField.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 24).isActive = true
-        amountTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-        amountTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-        amountTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
+    private func setupInstallmentsLabel() {
+        let stackView = UIStackView(arrangedSubviews: [installmentsLabel, stepper])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .trailing
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        
+        view.addSubview(stackView)
+        stackView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 24).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
+        stackView.heightAnchor.constraint(equalToConstant: 44).isActive = true
     }
     
     private func setupNextButton() {
@@ -117,8 +125,17 @@ extension AmountViewController {
     }
     
     private func setupViewModel() {
-        viewModel.nextButtonShouldEnable = { [weak self] shouldEnable in
-            self?.nextButton.shouldEnable = shouldEnable
+        viewModel.installmentsDidChange = { [weak self] in
+            guard let self = self else { return }
+            self.installmentsLabel.text = "\(self.viewModel.installments)"
+        }
+        
+        viewModel.recommendedMessageDidLoad = { [weak self] message in
+            DispatchQueue.main.async {
+                self?.createAlert(message: message) { _ in
+                    self?.viewModel.makePayment()
+                }
+            }
         }
     }
     
@@ -126,27 +143,17 @@ extension AmountViewController {
 
 // MARK: - Handler methods
 
-extension AmountViewController {
+extension SetInstallmentsViewController {
     
     @objc
-    func cancelPayment() {
-        viewModel.cancelPayment()
-    }
-    
-    @objc
-    private func amountChange() {
-        guard let amount = amountTextField.text,
-            !amount.isEmpty else {
-                viewModel.setAmount(to: 0)
-                return
-        }
-        
-        viewModel.setAmount(to: Int(amount) ?? 0)
+    private func setInstallments() {
+        let value = Int(stepper.value)
+        viewModel.setInstallments(to: value)
     }
     
     @objc
     private func nextPressed() {
-        viewModel.nextButtonPressed()
+        viewModel.getRecommendedInstallments()
     }
     
 }

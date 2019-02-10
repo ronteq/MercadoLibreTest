@@ -9,5 +9,10 @@
 import Foundation
 
 class Payment {
-    var title: String = "Probando"
+    var title = "Probando"
+    var amount = 0
+    var installments = 0
+    var paymentMethod: PaymentMethod?
+    var bank: Bank?
+    var createdAt = Date()
 }

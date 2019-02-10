@@ -9,19 +9,19 @@
 import Foundation
 
 protocol SetBankViewModelDelegate: class {
-    func setBankViewModelNextDidPressed(_ setBankViewModel: SetBankViewModel)
+    func setBankViewModelNextDidPressed(_ setBankViewModel: SetBankViewModel, with payment: Payment)
 }
 
 class SetBankViewModel: ViewModel {
     
     private let sessionProvider: ProviderProtocol
-    private let selectedPaymentMethod: PaymentMethod
+    private let payment: Payment
     private var banks: [Bank] = []
     weak var delegate: SetBankViewModelDelegate?
     
-    init(sessionProvider: ProviderProtocol = URLSessionProvider(), selectedPaymentMethod: PaymentMethod) {
+    init(sessionProvider: ProviderProtocol = URLSessionProvider(), payment: Payment) {
         self.sessionProvider = sessionProvider
-        self.selectedPaymentMethod = selectedPaymentMethod
+        self.payment = payment
     }
     
     var selectedBank: Bank? {
@@ -56,7 +56,9 @@ class SetBankViewModel: ViewModel {
 extension SetBankViewModel {
     
     func nextButtonPressed() {
-        delegate?.setBankViewModelNextDidPressed(self)
+        guard let selectedBank = selectedBank else { return }
+        payment.bank = selectedBank
+        delegate?.setBankViewModelNextDidPressed(self, with: payment)
     }
     
 }
@@ -66,8 +68,9 @@ extension SetBankViewModel {
 extension SetBankViewModel {
     
     func getBanks() {
+        guard let paymentMethodId = payment.paymentMethod?.id else { return }
         var filter = BankFilter()
-        filter.paymentMethod = selectedPaymentMethod.id
+        filter.paymentMethod = paymentMethodId
         sessionProvider.request(type: [Bank].self, service: BankService.banks(filter)) { [weak self] response in
             switch response {
             case .failure(let error): print(error)

@@ -13,6 +13,7 @@
 "error_button" = "Try again";
 "cancel" = "Cancel";
 "next" = "Next";
+"make_payment" = "Make payment";
 
 // MARK: - PaymentsViewController
 "payments_title" = "Payments";
@@ -27,3 +28,6 @@
 
 // MARK: - SetBankViewController
 "set_bank_title" = "Choose a bank";
+
+// MARK: - SetInstallmentsViewController
+"set_installments_title" = "How many installments?";

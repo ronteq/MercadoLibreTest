@@ -32,6 +32,12 @@
 		4C31B1D2220FC25600D58FE3 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1D1220FC25600D58FE3 /* Bank.swift */; };
 		4C31B1D5220FC2B000D58FE3 /* BankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1D4220FC2B000D58FE3 /* BankService.swift */; };
 		4C31B1D8220FC2DB00D58FE3 /* BankFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1D7220FC2DB00D58FE3 /* BankFilter.swift */; };
+		4C31B1DB221054A500D58FE3 /* SetInstallmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1DA221054A500D58FE3 /* SetInstallmentsViewController.swift */; };
+		4C31B1DD221055DA00D58FE3 /* SetInstallmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1DC221055DA00D58FE3 /* SetInstallmentsViewModel.swift */; };
+		4C31B1E62210602E00D58FE3 /* InstallmentsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1E52210602E00D58FE3 /* InstallmentsFilter.swift */; };
+		4C31B1E8221060BA00D58FE3 /* InstallmentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1E7221060BA00D58FE3 /* InstallmentsService.swift */; };
+		4C31B1EB2210624C00D58FE3 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1EA2210624C00D58FE3 /* PaymentResponse.swift */; };
+		4C31B1ED2210649500D58FE3 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1EC2210649500D58FE3 /* Alertable.swift */; };
 		4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */; };
 		4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF93220F77F60044DDD2 /* Assets.xcassets */; };
 		4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF95220F77F60044DDD2 /* LaunchScreen.storyboard */; };
@@ -84,6 +90,12 @@
 		4C31B1D1220FC25600D58FE3 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		4C31B1D4220FC2B000D58FE3 /* BankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankService.swift; sourceTree = "<group>"; };
 		4C31B1D7220FC2DB00D58FE3 /* BankFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankFilter.swift; sourceTree = "<group>"; };
+		4C31B1DA221054A500D58FE3 /* SetInstallmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetInstallmentsViewController.swift; sourceTree = "<group>"; };
+		4C31B1DC221055DA00D58FE3 /* SetInstallmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetInstallmentsViewModel.swift; sourceTree = "<group>"; };
+		4C31B1E52210602E00D58FE3 /* InstallmentsFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsFilter.swift; sourceTree = "<group>"; };
+		4C31B1E7221060BA00D58FE3 /* InstallmentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsService.swift; sourceTree = "<group>"; };
+		4C31B1EA2210624C00D58FE3 /* PaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
+		4C31B1EC2210649500D58FE3 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		4C97FF89220F77F50044DDD2 /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97FF93220F77F60044DDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -264,6 +276,42 @@
 			path = Filters;
 			sourceTree = "<group>";
 		};
+		4C31B1D92210545500D58FE3 /* SetInstallments */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1E32210601200D58FE3 /* Services */,
+				4C31B1E92210623A00D58FE3 /* Models */,
+				4C31B1DA221054A500D58FE3 /* SetInstallmentsViewController.swift */,
+				4C31B1DC221055DA00D58FE3 /* SetInstallmentsViewModel.swift */,
+			);
+			path = SetInstallments;
+			sourceTree = "<group>";
+		};
+		4C31B1E32210601200D58FE3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1E42210602200D58FE3 /* Filters */,
+				4C31B1E7221060BA00D58FE3 /* InstallmentsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4C31B1E42210602200D58FE3 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1E52210602E00D58FE3 /* InstallmentsFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		4C31B1E92210623A00D58FE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1EA2210624C00D58FE3 /* PaymentResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4C97FF80220F77F40044DDD2 = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +391,7 @@
 				4C97FFC3220F7F870044DDD2 /* SetAmount */,
 				4C31B19D220F948300D58FE3 /* SetPaymentCard */,
 				4C31B1CB220FBE3100D58FE3 /* SetBank */,
+				4C31B1D92210545500D58FE3 /* SetInstallments */,
 			);
 			path = MakePayment;
 			sourceTree = "<group>";
@@ -418,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				4C97FFC6220F800E0044DDD2 /* CellProtocol.swift */,
+				4C31B1EC2210649500D58FE3 /* Alertable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -606,6 +656,7 @@
 				4C31B1B1220FA83800D58FE3 /* ProviderProtocol.swift in Sources */,
 				4C31B1D5220FC2B000D58FE3 /* BankService.swift in Sources */,
 				4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */,
+				4C31B1DB221054A500D58FE3 /* SetInstallmentsViewController.swift in Sources */,
 				4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */,
 				4C97FFAF220F7A8C0044DDD2 /* MakePaymentCoordinator.swift in Sources */,
 				4C97FFC0220F7E6E0044DDD2 /* PaymentsCoordinator.swift in Sources */,
@@ -617,8 +668,10 @@
 				4C97FFCD220F80960044DDD2 /* PaymentCellViewModel.swift in Sources */,
 				4C31B1D8220FC2DB00D58FE3 /* BankFilter.swift in Sources */,
 				4C31B1A9220FA7BF00D58FE3 /* InternetConnection.swift in Sources */,
+				4C31B1ED2210649500D58FE3 /* Alertable.swift in Sources */,
 				4C97FFBC220F7BF60044DDD2 /* ColorExtensions.swift in Sources */,
 				4C31B19C220F90FC00D58FE3 /* UIViewControllerExtensions.swift in Sources */,
+				4C31B1EB2210624C00D58FE3 /* PaymentResponse.swift in Sources */,
 				4C97FFCF220F81190044DDD2 /* PaymentsViewModel.swift in Sources */,
 				4C97FFC7220F800E0044DDD2 /* CellProtocol.swift in Sources */,
 				4C31B1D2220FC25600D58FE3 /* Bank.swift in Sources */,
@@ -632,10 +685,13 @@
 				4C31B1AF220FA81800D58FE3 /* ServiceProtocol.swift in Sources */,
 				4C31B1A7220FA7A700D58FE3 /* Reachability.m in Sources */,
 				4C97FFC2220F7E820044DDD2 /* PaymentsViewController.swift in Sources */,
+				4C31B1DD221055DA00D58FE3 /* SetInstallmentsViewModel.swift in Sources */,
 				4C31B1A1220F956000D58FE3 /* SetPaymentCardViewModel.swift in Sources */,
 				4C97FFA9220F79700044DDD2 /* ViewModel.swift in Sources */,
 				4C97FFDA220F89C10044DDD2 /* AmountViewModel.swift in Sources */,
+				4C31B1E8221060BA00D58FE3 /* InstallmentsService.swift in Sources */,
 				4C97FFA3220F79070044DDD2 /* RootViewCoordinator.swift in Sources */,
+				4C31B1E62210602E00D58FE3 /* InstallmentsFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

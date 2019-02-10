@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-
+    
     func addGestureToHideKeyboad() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tap)

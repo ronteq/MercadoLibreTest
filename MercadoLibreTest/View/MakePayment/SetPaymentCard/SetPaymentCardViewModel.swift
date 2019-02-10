@@ -9,17 +9,19 @@
 import Foundation
 
 protocol SetPaymentCardViewModelDelegate: class {
-    func setPaymentCardViewModelNextDidPressed(_ setPaymentCardViewModel: SetPaymentCardViewModel)
+    func setPaymentCardViewModelNextDidPressed(_ setPaymentCardViewModel: SetPaymentCardViewModel, with payment: Payment)
 }
 
 class SetPaymentCardViewModel: ViewModel {
     
     private let sessionProvider: ProviderProtocol
+    private let payment: Payment
     private var paymentMethods: [PaymentMethod] = []
     weak var delegate: SetPaymentCardViewModelDelegate?
     
-    init(sessionProvider: ProviderProtocol = URLSessionProvider()) {
+    init(sessionProvider: ProviderProtocol = URLSessionProvider(), payment: Payment) {
         self.sessionProvider = sessionProvider
+        self.payment = payment
     }
     
     var selectedPaymentMethod: PaymentMethod? {
@@ -54,7 +56,9 @@ class SetPaymentCardViewModel: ViewModel {
 extension SetPaymentCardViewModel {
     
     func nextButtonPressed() {
-        delegate?.setPaymentCardViewModelNextDidPressed(self)
+        guard let selectedPaymentMethod = selectedPaymentMethod else { return }
+        payment.paymentMethod = selectedPaymentMethod
+        delegate?.setPaymentCardViewModelNextDidPressed(self, with: payment)
     }
     
 }

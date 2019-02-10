@@ -10,7 +10,7 @@ import Foundation
 
 protocol AmountViewModelDelegate: class {
     func amountViewModelDidCancel(_ amountViewModel: AmountViewModel)
-    func amountViewModelNextDidPressed(_ amountViewModel: AmountViewModel)
+    func amountViewModelNextDidPressed(_ amountViewModel: AmountViewModel, with payment: Payment)
 }
 
 class AmountViewModel: ViewModel {
@@ -32,7 +32,9 @@ extension AmountViewModel {
     }
     
     func nextButtonPressed() {
-        delegate?.amountViewModelNextDidPressed(self)
+        let payment = Payment()
+        payment.amount = amount
+        delegate?.amountViewModelNextDidPressed(self, with: payment)
     }
     
     func cancelPayment() {
