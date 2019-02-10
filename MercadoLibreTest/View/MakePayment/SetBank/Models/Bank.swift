@@ -14,6 +14,12 @@ struct Bank: Decodable {
     var imageUrl: String
     var isSelected: Bool = false
     
+    init(with cdBankName: String) {
+        self.id = ""
+        self.name = cdBankName
+        self.imageUrl = ""
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case id
         case name

@@ -14,6 +14,7 @@
 "cancel" = "Cancel";
 "next" = "Next";
 "make_payment" = "Make payment";
+"default_payment_title" = "Payment without title";
 
 // MARK: - PaymentsViewController
 "payments_title" = "Payments";
@@ -21,6 +22,7 @@
 // MARK: - AmountViewController
 "amount_title" = "Amount";
 "amount_placeholder" = "Amount to pay";
+"reason_placeholder" = "What are you paying? (optional)";
 "label_description" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
 
 // MARK: - SetPaymentCardViewController

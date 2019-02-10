@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum NetworkResponse<T> {
+enum Response<T> {
     case success(T)
-    case failure(NetworkError)
+    case failure(ResponseError)
 }
 
-enum NetworkError {
+enum ResponseError {
     case unknown(String)
     case noData
 }

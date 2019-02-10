@@ -15,6 +15,7 @@ protocol SetInstallmentsViewModelDelegate: class {
 class SetInstallmentsViewModel: ViewModel {
     
     private let sessionProvider: ProviderProtocol
+    private let paymentRepository: PaymentRepository
     private let payment: Payment
     private(set) var installments: Int = 1 {
         didSet {
@@ -24,8 +25,9 @@ class SetInstallmentsViewModel: ViewModel {
     
     weak var delegate: SetInstallmentsViewModelDelegate?
     
-    init(sessionProvider: ProviderProtocol = URLSessionProvider(), payment: Payment) {
+    init(sessionProvider: ProviderProtocol = URLSessionProvider(), paymentRepository: PaymentRepository = CDPaymentRepository(), payment: Payment) {
         self.sessionProvider = sessionProvider
+        self.paymentRepository = paymentRepository
         self.payment = payment
     }
     
@@ -71,9 +73,18 @@ extension SetInstallmentsViewModel {
     }
     
     func makePayment() {
-        // guardar en core data
-        // mandar notificacion
-        // delegate?.setInstallmentsViewModelNextDidPressed(self)
+        paymentRepository.savePayment(with: payment) { [weak self] response in
+            switch response {
+            case .success:
+                self?.sendNotificationAndDismiss()
+            case .failure(let error): print(error)
+            }
+        }
+    }
+    
+    private func sendNotificationAndDismiss() {
+        NotificationCenter.default.post(name: .paymentDidSave, object: nil)
+        delegate?.setInstallmentsViewModelNextDidPressed(self)
     }
     
 }

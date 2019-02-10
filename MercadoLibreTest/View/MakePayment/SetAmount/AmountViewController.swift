@@ -30,6 +30,15 @@ class AmountViewController: UIViewController {
         return textField
     }()
     
+    private lazy var reasonTextField: UITextField = {
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = "reason_placeholder".localized()
+        textField.keyboardType = .default
+        textField.borderStyle = .roundedRect
+        return textField
+    }()
+    
     private lazy var nextButton: LoaderButton = {
         let button = LoaderButton(type: .system)
         button.setTitle("next".localized(), for: .normal)
@@ -73,6 +82,7 @@ extension AmountViewController {
         addCancelButton()
         setupDescriptionLabel()
         setupAmountTextField()
+        setupReasonTextField()
         setupNextButton()
         addGestureToHideKeyboad()
     }
@@ -102,6 +112,14 @@ extension AmountViewController {
         amountTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         amountTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         amountTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
+    }
+    
+    private func setupReasonTextField() {
+        view.addSubview(reasonTextField)
+        reasonTextField.topAnchor.constraint(equalTo: amountTextField.bottomAnchor, constant: 16).isActive = true
+        reasonTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        reasonTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        reasonTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
     }
     
     private func setupNextButton() {
@@ -146,7 +164,7 @@ extension AmountViewController {
     
     @objc
     private func nextPressed() {
-        viewModel.nextButtonPressed()
+        viewModel.nextButtonPressed(with: reasonTextField.text)
     }
     
 }

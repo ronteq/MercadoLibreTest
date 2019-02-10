@@ -20,6 +20,13 @@ struct PaymentMethod: Decodable {
     var imageUrl: String
     var isSelected: Bool = false
     
+    init(with cdPaymentMethod: String) {
+        self.id = ""
+        self.name = cdPaymentMethod
+        self.status = ""
+        self.imageUrl = ""
+    }
+    
     var statusType: StatusType {
         return StatusType(rawValue: status) ?? .testing
     }

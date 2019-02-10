@@ -42,6 +42,7 @@ extension PaymentsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
+        setupViewModel()
     }
     
 }
@@ -69,6 +70,18 @@ extension PaymentsViewController {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPayment))
         navigationItem.rightBarButtonItems = [addButton]
     }
+    
+    private func setupViewModel() {
+        viewModel.paymentsDidLoad = { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+    
+}
+
+// MARK: - Helper methods
+
+extension PaymentsViewController {
     
     @objc
     private func addPayment() {

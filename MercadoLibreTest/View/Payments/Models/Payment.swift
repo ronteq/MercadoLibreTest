@@ -15,4 +15,15 @@ class Payment {
     var paymentMethod: PaymentMethod?
     var bank: Bank?
     var createdAt = Date()
+    
+    convenience init(with cdPayment: CDPayment) {
+        self.init()
+        self.title = cdPayment.title ?? ""
+        self.amount = Int(cdPayment.amount)
+        self.installments = Int(cdPayment.installments)
+        self.paymentMethod = PaymentMethod(with: cdPayment.paymentMethod ?? "")
+        self.bank = Bank(with: cdPayment.bank ?? "")
+        self.createdAt = cdPayment.createdAt as Date? ?? Date()
+    }
+    
 }

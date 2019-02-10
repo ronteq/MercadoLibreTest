@@ -31,9 +31,10 @@ extension AmountViewModel {
         nextButtonShouldEnable?(shouldEnable)
     }
     
-    func nextButtonPressed() {
+    func nextButtonPressed(with title: String?) {
         let payment = Payment()
         payment.amount = amount
+        payment.title = title ?? "default_payment_title".localized()
         delegate?.amountViewModelNextDidPressed(self, with: payment)
     }
     
