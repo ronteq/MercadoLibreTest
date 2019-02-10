@@ -73,7 +73,7 @@ extension SetPaymentCardViewModel {
             let filter = PaymentCardFilter()
             sessionProvider.request(type: [PaymentMethod].self, service: PaymentCardService.methods(filter)) { [weak self] response in
                 switch response {
-                case .failure(let error): print(error)
+                case .failure: self?.paymentMethodsDidFail?("server_error".localized())
                 case .success(let paymentMethods):
                     self?.paymentMethods = paymentMethods.filter { $0.statusType == .active }
                     self?.paymentMethodsDidLoad?()

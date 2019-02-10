@@ -7,7 +7,7 @@
 */
 
 // MARK: - General
-"no_response" = "No hay data para procesar";
+"server_error" = "Error con el servicio";
 "no_results" = "Por ahora no hay resultados";
 "no_internet" = "Sin internet, trata nuevamente más tarde";
 "error_button" = "Intenta de nuevo";
@@ -34,6 +34,7 @@
 
 // MARK: - SetInstallmentsViewController
 "set_installments_title" = "¿Cuántas cuotas?";
+"installments_error" = "No podemos procesar pagos para la cantidad de cuotas especificada";
 
 // MARK: - DetailPaymentViewController
 "set_detail_payment_title" = "Detalle del pago";

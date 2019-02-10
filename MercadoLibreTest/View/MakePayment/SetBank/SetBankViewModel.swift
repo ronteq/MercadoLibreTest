@@ -75,7 +75,7 @@ extension SetBankViewModel {
             filter.paymentMethod = paymentMethodId
             sessionProvider.request(type: [Bank].self, service: BankService.banks(filter)) { [weak self] response in
                 switch response {
-                case .failure(let error): print(error)
+                case .failure: self?.banksDidFail?("server_error".localized())
                 case .success(let banks):
                     self?.banks = banks
                     self?.banksDidLoad?()

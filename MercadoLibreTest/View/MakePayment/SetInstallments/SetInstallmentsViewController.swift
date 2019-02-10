@@ -29,6 +29,15 @@ class SetInstallmentsViewController: UIViewController, Alertable {
         return label
     }()
     
+    private let errorLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .customOrange
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.numberOfLines = 2
+        return label
+    }()
+    
     private let stepper: UIStepper = {
         let stepper = UIStepper()
         stepper.translatesAutoresizingMaskIntoConstraints = false
@@ -80,6 +89,7 @@ extension SetInstallmentsViewController {
         title = "set_installments_title".localized()
         setupDescriptionLabel()
         setupInstallmentsLabel()
+        setupErrorLabel()
         setupNextButton()
         addGestureToHideKeyboad()
     }
@@ -112,6 +122,13 @@ extension SetInstallmentsViewController {
         stackView.heightAnchor.constraint(equalToConstant: 44).isActive = true
     }
     
+    private func setupErrorLabel() {
+        view.addSubview(errorLabel)
+        errorLabel.topAnchor.constraint(equalTo: installmentsLabel.bottomAnchor, constant: 24).isActive = true
+        errorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        errorLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 16).isActive = true
+    }
+    
     private func setupNextButton() {
         view.addSubview(nextButton)
         nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
@@ -132,9 +149,18 @@ extension SetInstallmentsViewController {
         
         viewModel.recommendedMessageDidLoad = { [weak self] message in
             DispatchQueue.main.async {
+                self?.nextButton.stopLoader()
+                self?.errorLabel.text = ""
                 self?.createAlert(message: message) { _ in
                     self?.viewModel.makePayment()
                 }
+            }
+        }
+        
+        viewModel.noInstallmentsAvailable = { [weak self] message in
+            DispatchQueue.main.async {
+                self?.nextButton.stopLoader()
+                self?.errorLabel.text = message
             }
         }
     }
@@ -153,6 +179,7 @@ extension SetInstallmentsViewController {
     
     @objc
     private func nextPressed() {
+        nextButton.startLoader()
         viewModel.getRecommendedInstallments()
     }
     

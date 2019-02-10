@@ -26,13 +26,13 @@ final class URLSessionProvider: ProviderProtocol {
     
     private func handleDataResponse<T: Decodable>(data: Data?, response: HTTPURLResponse?, error: Error?, completion: (Response<T>) -> Void) {
         guard error == nil else { return completion(.failure(.unknown(error?.localizedDescription ?? "Error"))) }
-        guard let response = response else { return completion(.failure(.unknown("no_response".localized()))) }
+        guard let response = response else { return completion(.failure(.unknown("server_error".localized()))) }
         
         switch response.statusCode {
         case 200...299:
             guard let data = data, let model = try? JSONDecoder().decode(T.self, from: data) else { return completion(.failure(.noData)) }
             completion(.success(model))
-        default: completion(.failure(.unknown("no_response".localized())))
+        default: completion(.failure(.unknown("server_error".localized())))
         }
     }
     

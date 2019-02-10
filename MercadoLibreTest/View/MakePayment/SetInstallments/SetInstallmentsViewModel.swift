@@ -33,6 +33,7 @@ class SetInstallmentsViewModel: ViewModel {
     }
     
     var installmentsDidChange: (() -> Void)?
+    var noInstallmentsAvailable: ((String) -> Void)?
     var recommendedMessageDidLoad: ((String) -> Void)?
     
 }
@@ -51,10 +52,10 @@ extension SetInstallmentsViewModel {
         
         sessionProvider.request(type: [PaymentResponse].self, service: InstallmentsService.payment(filter)) { [weak self] response in
             switch response {
-            case .failure(let error): print(error)
+            case .failure: self?.noInstallmentsAvailable?("server_error".localized())
             case .success(let paymentResponses):
                 guard let payer = paymentResponses.first?.payers.first(where: { $0.installments == self?.installments }) else {
-                    // show error
+                    self?.noInstallmentsAvailable?("installments_error".localized())
                     return
                 }
                 
