@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class SetPaymentCardViewController: UIViewController, CanShowError {
+class SetPaymentCardViewController: UIViewController, CanShowError, Loadable {
     
     private lazy var tableView: UITableView = {
         let tv = UITableView()
@@ -32,6 +32,7 @@ class SetPaymentCardViewController: UIViewController, CanShowError {
     
     private let viewModel: SetPaymentCardViewModel
     var errorView: ErrorView?
+    var loader = Loader()
     
     init(viewModel: SetPaymentCardViewModel) {
         self.viewModel = viewModel
@@ -90,6 +91,7 @@ extension SetPaymentCardViewController {
     private func setupViewModel() {
         viewModel.paymentMethodsDidLoad = { [weak self] in
             DispatchQueue.main.async {
+                self?.stopLoader()
                 self?.hideError()
                 self?.tableView.reloadData()
             }
@@ -101,11 +103,13 @@ extension SetPaymentCardViewController {
         
         viewModel.paymentMethodsDidFail = { [weak self] message in
             DispatchQueue.main.async {
+                self?.stopLoader()
                 self?.handleErrorView(withMessage: message)
             }
         }
         
         viewModel.getPaymentMethods()
+        startLoader()
     }
     
 }

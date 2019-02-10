@@ -54,6 +54,8 @@
 		4C31B2102210892F00D58FE3 /* DetailGeneralTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C31B20E2210892F00D58FE3 /* DetailGeneralTableViewCell.xib */; };
 		4C31B21222109A5F00D58FE3 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B21122109A5F00D58FE3 /* ErrorView.swift */; };
 		4C31B21422109AA600D58FE3 /* CanShowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B21322109AA600D58FE3 /* CanShowError.swift */; };
+		4C31B2162210A0FD00D58FE3 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B2152210A0FD00D58FE3 /* Loader.swift */; };
+		4C31B2182210A11800D58FE3 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B2172210A11800D58FE3 /* Loadable.swift */; };
 		4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */; };
 		4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF93220F77F60044DDD2 /* Assets.xcassets */; };
 		4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF95220F77F60044DDD2 /* LaunchScreen.storyboard */; };
@@ -128,6 +130,8 @@
 		4C31B20E2210892F00D58FE3 /* DetailGeneralTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailGeneralTableViewCell.xib; sourceTree = "<group>"; };
 		4C31B21122109A5F00D58FE3 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		4C31B21322109AA600D58FE3 /* CanShowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanShowError.swift; sourceTree = "<group>"; };
+		4C31B2152210A0FD00D58FE3 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		4C31B2172210A11800D58FE3 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		4C97FF89220F77F50044DDD2 /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97FF93220F77F60044DDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -563,6 +567,7 @@
 				4C97FFC6220F800E0044DDD2 /* CellProtocol.swift */,
 				4C31B1EC2210649500D58FE3 /* Alertable.swift */,
 				4C31B21322109AA600D58FE3 /* CanShowError.swift */,
+				4C31B2172210A11800D58FE3 /* Loadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -582,6 +587,7 @@
 				4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */,
 				4C31B199220F8F0D00D58FE3 /* LoaderButton.swift */,
 				4C31B21122109A5F00D58FE3 /* ErrorView.swift */,
+				4C31B2152210A0FD00D58FE3 /* Loader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -768,6 +774,7 @@
 				4C31B1F622106DE100D58FE3 /* CDPayment+CoreDataClass.swift in Sources */,
 				4C31B1BF220FAA4D00D58FE3 /* PaymentCardService.swift in Sources */,
 				4C97FFAC220F7A550044DDD2 /* AmountViewController.swift in Sources */,
+				4C31B2162210A0FD00D58FE3 /* Loader.swift in Sources */,
 				4C97FFCA220F80370044DDD2 /* PaymentTableViewCell.swift in Sources */,
 				4C31B1B6220FA87500D58FE3 /* NetworkResponse.swift in Sources */,
 				4C97FFCD220F80960044DDD2 /* PaymentCellViewModel.swift in Sources */,
@@ -802,6 +809,7 @@
 				4C31B1FD22106F7400D58FE3 /* CDPaymentRepository.swift in Sources */,
 				4C97FFDA220F89C10044DDD2 /* AmountViewModel.swift in Sources */,
 				4C31B1E8221060BA00D58FE3 /* InstallmentsService.swift in Sources */,
+				4C31B2182210A11800D58FE3 /* Loadable.swift in Sources */,
 				4C97FFA3220F79070044DDD2 /* RootViewCoordinator.swift in Sources */,
 				4C31B1E62210602E00D58FE3 /* InstallmentsFilter.swift in Sources */,
 			);

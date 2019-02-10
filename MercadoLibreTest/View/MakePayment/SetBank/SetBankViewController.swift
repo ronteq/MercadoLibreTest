@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class SetBankViewController: UIViewController, CanShowError {
+class SetBankViewController: UIViewController, CanShowError, Loadable {
     
     private lazy var tableView: UITableView = {
         let tv = UITableView()
@@ -33,6 +33,7 @@ class SetBankViewController: UIViewController, CanShowError {
     private let viewModel: SetBankViewModel
     lazy var emptyView = EmptyTableView()
     var errorView: ErrorView?
+    var loader = Loader()
     
     init(viewModel: SetBankViewModel) {
         self.viewModel = viewModel
@@ -91,6 +92,7 @@ extension SetBankViewController {
     private func setupViewModel() {
         viewModel.banksDidLoad = { [weak self] in
             DispatchQueue.main.async {
+                self?.stopLoader()
                 self?.showResults()
             }
         }
@@ -101,11 +103,13 @@ extension SetBankViewController {
         
         viewModel.banksDidFail = { [weak self] message in
             DispatchQueue.main.async {
+                self?.stopLoader()
                 self?.handleErrorView(withMessage: message)
             }
         }
         
         viewModel.getBanks()
+        startLoader()
     }
     
 }
