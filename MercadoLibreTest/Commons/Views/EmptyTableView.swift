@@ -16,6 +16,7 @@ class EmptyTableView: UIView {
         label.text = "no_results".localized()
         label.font = UIFont.systemFont(ofSize: 15)
         label.textColor = .darkGray
+        label.numberOfLines = 0
         label.textAlignment = .center
         return label
     }()
@@ -36,6 +37,10 @@ class EmptyTableView: UIView {
         noResultsLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         noResultsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
         noResultsLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16).isActive = true
+    }
+    
+    func setText(_ text: String) {
+        noResultsLabel.text = text
     }
     
 }

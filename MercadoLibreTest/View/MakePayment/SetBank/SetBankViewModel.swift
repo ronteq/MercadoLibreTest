@@ -48,6 +48,7 @@ class SetBankViewModel: ViewModel {
     
     var banksDidLoad: (() -> Void)?
     var nextButtonShouldEnable: ((Bool) -> Void)?
+    var banksDidFail: ((String) -> Void)?
     
 }
 
@@ -68,16 +69,20 @@ extension SetBankViewModel {
 extension SetBankViewModel {
     
     func getBanks() {
-        guard let paymentMethodId = payment.paymentMethod?.id else { return }
-        var filter = BankFilter()
-        filter.paymentMethod = paymentMethodId
-        sessionProvider.request(type: [Bank].self, service: BankService.banks(filter)) { [weak self] response in
-            switch response {
-            case .failure(let error): print(error)
-            case .success(let banks):
-                self?.banks = banks
-                self?.banksDidLoad?()
+        if InternetConnection.isOn() {
+            guard let paymentMethodId = payment.paymentMethod?.id else { return }
+            var filter = BankFilter()
+            filter.paymentMethod = paymentMethodId
+            sessionProvider.request(type: [Bank].self, service: BankService.banks(filter)) { [weak self] response in
+                switch response {
+                case .failure(let error): print(error)
+                case .success(let banks):
+                    self?.banks = banks
+                    self?.banksDidLoad?()
+                }
             }
+        } else {
+            banksDidFail?("no_internet".localized())
         }
     }
     

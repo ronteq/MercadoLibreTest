@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class SetPaymentCardViewController: UIViewController {
+class SetPaymentCardViewController: UIViewController, CanShowError {
     
     private lazy var tableView: UITableView = {
         let tv = UITableView()
@@ -31,6 +31,7 @@ class SetPaymentCardViewController: UIViewController {
     }()
     
     private let viewModel: SetPaymentCardViewModel
+    var errorView: ErrorView?
     
     init(viewModel: SetPaymentCardViewModel) {
         self.viewModel = viewModel
@@ -89,12 +90,19 @@ extension SetPaymentCardViewController {
     private func setupViewModel() {
         viewModel.paymentMethodsDidLoad = { [weak self] in
             DispatchQueue.main.async {
+                self?.hideError()
                 self?.tableView.reloadData()
             }
         }
         
         viewModel.nextButtonShouldEnable = { [weak self] shouldEnable in
             self?.nextButton.shouldEnable = shouldEnable
+        }
+        
+        viewModel.paymentMethodsDidFail = { [weak self] message in
+            DispatchQueue.main.async {
+                self?.handleErrorView(withMessage: message)
+            }
         }
         
         viewModel.getPaymentMethods()
@@ -109,6 +117,13 @@ extension SetPaymentCardViewController {
     @objc
     private func nextPressed() {
         viewModel.nextButtonPressed()
+    }
+    
+    private func handleErrorView(withMessage message: String) {
+        showError(withMessage: message)
+        errorView?.onTryAgainDidPressed = { [weak self] in
+            self?.viewModel.getPaymentMethods()
+        }
     }
     
 }

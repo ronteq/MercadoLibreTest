@@ -47,6 +47,7 @@ class SetPaymentCardViewModel: ViewModel {
     }
     
     var paymentMethodsDidLoad: (() -> Void)?
+    var paymentMethodsDidFail: ((String) -> Void)?
     var nextButtonShouldEnable: ((Bool) -> Void)?
     
 }
@@ -68,14 +69,18 @@ extension SetPaymentCardViewModel {
 extension SetPaymentCardViewModel {
     
     func getPaymentMethods() {
-        let filter = PaymentCardFilter()
-        sessionProvider.request(type: [PaymentMethod].self, service: PaymentCardService.methods(filter)) { [weak self] response in
-            switch response {
-            case .failure(let error): print(error)
-            case .success(let paymentMethods):
-                self?.paymentMethods = paymentMethods.filter { $0.statusType == .active }
-                self?.paymentMethodsDidLoad?()
+        if InternetConnection.isOn() {
+            let filter = PaymentCardFilter()
+            sessionProvider.request(type: [PaymentMethod].self, service: PaymentCardService.methods(filter)) { [weak self] response in
+                switch response {
+                case .failure(let error): print(error)
+                case .success(let paymentMethods):
+                    self?.paymentMethods = paymentMethods.filter { $0.statusType == .active }
+                    self?.paymentMethodsDidLoad?()
+                }
             }
+        } else {
+            paymentMethodsDidFail?("no_internet".localized())
         }
     }
     

@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class SetBankViewController: UIViewController {
+class SetBankViewController: UIViewController, CanShowError {
     
     private lazy var tableView: UITableView = {
         let tv = UITableView()
@@ -31,6 +31,8 @@ class SetBankViewController: UIViewController {
     }()
     
     private let viewModel: SetBankViewModel
+    lazy var emptyView = EmptyTableView()
+    var errorView: ErrorView?
     
     init(viewModel: SetBankViewModel) {
         self.viewModel = viewModel
@@ -89,12 +91,18 @@ extension SetBankViewController {
     private func setupViewModel() {
         viewModel.banksDidLoad = { [weak self] in
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
+                self?.showResults()
             }
         }
         
         viewModel.nextButtonShouldEnable = { [weak self] shouldEnable in
             self?.nextButton.shouldEnable = shouldEnable
+        }
+        
+        viewModel.banksDidFail = { [weak self] message in
+            DispatchQueue.main.async {
+                self?.handleErrorView(withMessage: message)
+            }
         }
         
         viewModel.getBanks()
@@ -109,6 +117,20 @@ extension SetBankViewController {
     @objc
     private func nextPressed() {
         viewModel.nextButtonPressed()
+    }
+    
+    private func showResults() {
+        hideError()
+        tableView.reloadData()
+        emptyView.setText("bank_empty".localized())
+        tableView.backgroundView = viewModel.totalBanks == 0 ? emptyView : nil
+    }
+    
+    private func handleErrorView(withMessage message: String) {
+        showError(withMessage: message)
+        errorView?.onTryAgainDidPressed = { [weak self] in
+            self?.viewModel.getBanks()
+        }
     }
     
 }

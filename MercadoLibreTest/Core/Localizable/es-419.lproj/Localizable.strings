@@ -30,6 +30,7 @@
 
 // MARK: - SetBankViewController
 "set_bank_title" = "Escoge un banco";
+"bank_empty" = "No hay banco disponible para el método de pago escogido";
 
 // MARK: - SetInstallmentsViewController
 "set_installments_title" = "¿Cuántas cuotas?";
