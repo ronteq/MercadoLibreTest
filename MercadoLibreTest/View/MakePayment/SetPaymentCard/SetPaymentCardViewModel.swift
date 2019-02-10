@@ -11,10 +11,21 @@ import Foundation
 class SetPaymentCardViewModel: ViewModel {
     
     private let sessionProvider: ProviderProtocol
+    private var paymentMethods: [PaymentMethod] = []
     
     init(sessionProvider: ProviderProtocol = URLSessionProvider()) {
         self.sessionProvider = sessionProvider
     }
+    
+    var totalPaymentMethods: Int {
+        return paymentMethods.count
+    }
+    
+    func title(for indexPath: IndexPath) -> String {
+        return paymentMethods[indexPath.row].name
+    }
+    
+    var paymentMethodsDidLoad: (() -> Void)?
     
 }
 
@@ -27,7 +38,9 @@ extension SetPaymentCardViewModel {
         sessionProvider.request(type: [PaymentMethod].self, service: PaymentCardService.methods(filter)) { [weak self] response in
             switch response {
             case .failure(let error): print(error)
-            case .success(let paymentMethods): print(paymentMethods)
+            case .success(let paymentMethods):
+                self?.paymentMethods = paymentMethods.filter { $0.statusType == .active }
+                self?.paymentMethodsDidLoad?()
             }
         }
     }

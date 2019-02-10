@@ -25,6 +25,8 @@
 		4C31B1BF220FAA4D00D58FE3 /* PaymentCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1BE220FAA4D00D58FE3 /* PaymentCardService.swift */; };
 		4C31B1C2220FAA7600D58FE3 /* PaymentCardFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C1220FAA7600D58FE3 /* PaymentCardFilter.swift */; };
 		4C31B1C5220FABA400D58FE3 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */; };
+		4C31B1C9220FB09000D58FE3 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C7220FB09000D58FE3 /* DefaultTableViewCell.swift */; };
+		4C31B1CA220FB09000D58FE3 /* DefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C31B1C8220FB09000D58FE3 /* DefaultTableViewCell.xib */; };
 		4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */; };
 		4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF93220F77F60044DDD2 /* Assets.xcassets */; };
 		4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF95220F77F60044DDD2 /* LaunchScreen.storyboard */; };
@@ -70,6 +72,8 @@
 		4C31B1BE220FAA4D00D58FE3 /* PaymentCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardService.swift; sourceTree = "<group>"; };
 		4C31B1C1220FAA7600D58FE3 /* PaymentCardFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardFilter.swift; sourceTree = "<group>"; };
 		4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		4C31B1C7220FB09000D58FE3 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		4C31B1C8220FB09000D58FE3 /* DefaultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableViewCell.xib; sourceTree = "<group>"; };
 		4C97FF89220F77F50044DDD2 /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97FF93220F77F60044DDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -203,6 +207,15 @@
 				4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4C31B1C6220FB02000D58FE3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1C7220FB09000D58FE3 /* DefaultTableViewCell.swift */,
+				4C31B1C8220FB09000D58FE3 /* DefaultTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4C97FF80220F77F40044DDD2 = {
@@ -373,6 +386,7 @@
 		4C97FFD1220F81630044DDD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C31B1C6220FB02000D58FE3 /* Cells */,
 				4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */,
 				4C31B199220F8F0D00D58FE3 /* LoaderButton.swift */,
 			);
@@ -461,6 +475,7 @@
 				4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */,
 				4C97FFB4220F7B560044DDD2 /* Localizable.strings in Resources */,
 				4C97FFCB220F80370044DDD2 /* PaymentTableViewCell.xib in Resources */,
+				4C31B1CA220FB09000D58FE3 /* DefaultTableViewCell.xib in Resources */,
 				4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +550,7 @@
 				4C97FFCF220F81190044DDD2 /* PaymentsViewModel.swift in Sources */,
 				4C97FFC7220F800E0044DDD2 /* CellProtocol.swift in Sources */,
 				4C31B1C5220FABA400D58FE3 /* PaymentMethod.swift in Sources */,
+				4C31B1C9220FB09000D58FE3 /* DefaultTableViewCell.swift in Sources */,
 				4C31B1C2220FAA7600D58FE3 /* PaymentCardFilter.swift in Sources */,
 				4C31B1B8220FA89000D58FE3 /* URLSessionProvider.swift in Sources */,
 				4C97FFA1220F78F40044DDD2 /* Coordinator.swift in Sources */,
