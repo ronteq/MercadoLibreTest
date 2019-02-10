@@ -24,3 +24,6 @@
 
 // MARK: - SetPaymentCardViewController
 "set_payment_title" = "Choose a card type";
+
+// MARK: - SetBankViewController
+"set_bank_title" = "Choose a bank";

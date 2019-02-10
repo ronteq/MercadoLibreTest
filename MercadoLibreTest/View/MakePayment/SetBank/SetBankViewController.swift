@@ -61,7 +61,7 @@ extension SetBankViewController {
     
     private func initialSetup() {
         view.backgroundColor = .customGray
-        title = "set_payment_title".localized()
+        title = "set_bank_title".localized()
         setupNextButton()
         setupTableView()
     }
