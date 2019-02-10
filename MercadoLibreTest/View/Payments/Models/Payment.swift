@@ -20,6 +20,7 @@ class Payment {
     convenience init(with cdPayment: CDPayment) {
         self.init()
         self.title = cdPayment.title ?? ""
+        self.message = cdPayment.message ?? ""
         self.amount = Int(cdPayment.amount)
         self.installments = Int(cdPayment.installments)
         self.paymentMethod = PaymentMethod(with: cdPayment.paymentMethod ?? "")

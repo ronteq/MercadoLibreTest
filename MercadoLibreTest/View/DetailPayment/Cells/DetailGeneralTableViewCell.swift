@@ -11,6 +11,7 @@ import UIKit
 class DetailGeneralTableViewCell: UITableViewCell, CellProtocol {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var installmentsLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
@@ -29,6 +30,7 @@ class DetailGeneralTableViewCell: UITableViewCell, CellProtocol {
     private func setupUI() {
         guard let item = item as? DetailGeneralItem else { return }
         titleLabel.text = item.title
+        dateLabel.text = item.date
         amountLabel.text = item.amount
         installmentsLabel.text = item.installments
         messageLabel.text = item.message

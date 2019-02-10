@@ -58,6 +58,7 @@ extension SetInstallmentsViewModel {
                     return
                 }
                 
+                self?.payment.message = payer.recommendedMessage
                 self?.recommendedMessageDidLoad?(payer.recommendedMessage)
             }
         }

@@ -62,6 +62,7 @@ extension DetailPaymentViewController {
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.estimatedRowHeight = 200
     }
     
 }
@@ -73,7 +74,7 @@ extension DetailPaymentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item = viewModel.item(in: indexPath.section)
         switch item.category {
-        case .general: return 180
+        case .general: return UITableView.automaticDimension
         default: return 100
         }
     }

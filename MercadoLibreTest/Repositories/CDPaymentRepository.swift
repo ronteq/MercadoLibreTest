@@ -27,6 +27,7 @@ class CDPaymentRepository: PaymentRepository {
     func savePayment(with payment: Payment, result: SavePaymentResult) {
         let cdPayment = CDPayment(context: viewContext)
         cdPayment.title = payment.title
+        cdPayment.message = payment.message
         cdPayment.amount = Double(payment.amount)
         cdPayment.installments = Double(payment.installments)
         cdPayment.paymentMethod = payment.paymentMethod?.name

@@ -16,6 +16,7 @@ extension CDPayment {
     }
     
     @NSManaged public var bank: String?
+    @NSManaged public var message: String?
     @NSManaged public var amount: Double
     @NSManaged public var installments: Double
     @NSManaged public var paymentMethod: String?

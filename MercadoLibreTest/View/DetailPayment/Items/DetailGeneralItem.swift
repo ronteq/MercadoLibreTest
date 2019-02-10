@@ -40,4 +40,10 @@ class DetailGeneralItem: ViewModel, DetailPaymentItem {
         return "\(payment.message)"
     }
     
+    var date: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        return dateFormatter.string(from: payment.createdAt)
+    }
+    
 }
