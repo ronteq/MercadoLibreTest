@@ -15,7 +15,7 @@ class SetInstallmentsViewController: UIViewController, Alertable {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .darkGray
         label.font = UIFont.systemFont(ofSize: 16)
-        label.text = "label_description".localized()
+        label.text = "label_installments_description".localized()
         label.numberOfLines = 0
         return label
     }()

@@ -23,7 +23,7 @@
 "amount_title" = "Monto";
 "amount_placeholder" = "Monto a pagar";
 "reason_placeholder" = "¿Qué estás pagando? (opcional)";
-"label_description" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+"label_amount_description" = "¡Especifíca el monto junto con un titulo para que no olvides que fue lo que pagaste!";
 
 // MARK: - SetPaymentCardViewController
 "set_payment_title" = "Escoje una tarjeta";
@@ -35,6 +35,7 @@
 // MARK: - SetInstallmentsViewController
 "set_installments_title" = "¿Cuántas cuotas?";
 "installments_error" = "No podemos procesar pagos para la cantidad de cuotas especificada";
+"label_installments_description" = "Puedes variar las cuotas a como mejor te organices. Solo recuerda que a más cuotas por pagar mayor sera el interés a cobrar.";
 
 // MARK: - DetailPaymentViewController
 "set_detail_payment_title" = "Detalle del pago";

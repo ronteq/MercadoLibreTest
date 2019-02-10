@@ -23,7 +23,7 @@
 "amount_title" = "Amount";
 "amount_placeholder" = "Amount to pay";
 "reason_placeholder" = "What are you paying? (optional)";
-"label_description" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+"label_amount_description" = "Specify the amount along with a title so you can't forget what you pay for!";
 
 // MARK: - SetPaymentCardViewController
 "set_payment_title" = "Choose a card type";
@@ -35,6 +35,7 @@
 // MARK: - SetInstallmentsViewController
 "set_installments_title" = "How many installments?";
 "installments_error" = "Cannot process payments with the installments quantity specified";
+"label_installments_description" = "You can change the installments as you want. Just remember, more installments mean more fees to charge.";
 
 // MARK: - DetailPaymentViewController
 "set_detail_payment_title" = "Payment Detail";
