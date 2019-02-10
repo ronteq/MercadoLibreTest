@@ -35,8 +35,7 @@ class EmptyTableView: UIView {
         addSubview(noResultsLabel)
         noResultsLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         noResultsLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        noResultsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
-        noResultsLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16).isActive = true
+        noResultsLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8).isActive = true
     }
     
     func setText(_ text: String) {
