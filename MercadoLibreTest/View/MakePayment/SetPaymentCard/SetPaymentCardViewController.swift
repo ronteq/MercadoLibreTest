@@ -30,6 +30,7 @@ extension SetPaymentCardViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
+        
     }
     
 }

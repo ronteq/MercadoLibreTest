@@ -12,6 +12,19 @@
 		4C31B19C220F90FC00D58FE3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B19B220F90FC00D58FE3 /* UIViewControllerExtensions.swift */; };
 		4C31B19F220F94DF00D58FE3 /* SetPaymentCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B19E220F94DF00D58FE3 /* SetPaymentCardViewController.swift */; };
 		4C31B1A1220F956000D58FE3 /* SetPaymentCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1A0220F956000D58FE3 /* SetPaymentCardViewModel.swift */; };
+		4C31B1A7220FA7A700D58FE3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1A6220FA7A700D58FE3 /* Reachability.m */; };
+		4C31B1A9220FA7BF00D58FE3 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1A8220FA7BF00D58FE3 /* InternetConnection.swift */; };
+		4C31B1AC220FA7DB00D58FE3 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1AB220FA7DB00D58FE3 /* APIEndpoints.swift */; };
+		4C31B1AF220FA81800D58FE3 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1AE220FA81800D58FE3 /* ServiceProtocol.swift */; };
+		4C31B1B1220FA83800D58FE3 /* ProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1B0220FA83800D58FE3 /* ProviderProtocol.swift */; };
+		4C31B1B3220FA84C00D58FE3 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1B2220FA84C00D58FE3 /* URLSessionProtocol.swift */; };
+		4C31B1B6220FA87500D58FE3 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1B5220FA87500D58FE3 /* NetworkResponse.swift */; };
+		4C31B1B8220FA89000D58FE3 /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1B7220FA89000D58FE3 /* URLSessionProvider.swift */; };
+		4C31B1BA220FA8D100D58FE3 /* URLComponentsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1B9220FA8D100D58FE3 /* URLComponentsExtensions.swift */; };
+		4C31B1BC220FA8F000D58FE3 /* URLRequestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1BB220FA8F000D58FE3 /* URLRequestExtensions.swift */; };
+		4C31B1BF220FAA4D00D58FE3 /* PaymentCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1BE220FAA4D00D58FE3 /* PaymentCardService.swift */; };
+		4C31B1C2220FAA7600D58FE3 /* PaymentCardFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C1220FAA7600D58FE3 /* PaymentCardFilter.swift */; };
+		4C31B1C5220FABA400D58FE3 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */; };
 		4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */; };
 		4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF93220F77F60044DDD2 /* Assets.xcassets */; };
 		4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF95220F77F60044DDD2 /* LaunchScreen.storyboard */; };
@@ -42,6 +55,21 @@
 		4C31B19B220F90FC00D58FE3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		4C31B19E220F94DF00D58FE3 /* SetPaymentCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPaymentCardViewController.swift; sourceTree = "<group>"; };
 		4C31B1A0220F956000D58FE3 /* SetPaymentCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPaymentCardViewModel.swift; sourceTree = "<group>"; };
+		4C31B1A4220FA7A600D58FE3 /* MercadoLibreTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MercadoLibreTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C31B1A5220FA7A700D58FE3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		4C31B1A6220FA7A700D58FE3 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		4C31B1A8220FA7BF00D58FE3 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
+		4C31B1AB220FA7DB00D58FE3 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		4C31B1AE220FA81800D58FE3 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		4C31B1B0220FA83800D58FE3 /* ProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProtocol.swift; sourceTree = "<group>"; };
+		4C31B1B2220FA84C00D58FE3 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		4C31B1B5220FA87500D58FE3 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		4C31B1B7220FA89000D58FE3 /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
+		4C31B1B9220FA8D100D58FE3 /* URLComponentsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtensions.swift; sourceTree = "<group>"; };
+		4C31B1BB220FA8F000D58FE3 /* URLRequestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtensions.swift; sourceTree = "<group>"; };
+		4C31B1BE220FAA4D00D58FE3 /* PaymentCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardService.swift; sourceTree = "<group>"; };
+		4C31B1C1220FAA7600D58FE3 /* PaymentCardFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardFilter.swift; sourceTree = "<group>"; };
+		4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 		4C97FF89220F77F50044DDD2 /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97FF93220F77F60044DDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,10 +123,86 @@
 		4C31B19D220F948300D58FE3 /* SetPaymentCard */ = {
 			isa = PBXGroup;
 			children = (
+				4C31B1BD220FAA3D00D58FE3 /* Services */,
+				4C31B1C3220FAB9B00D58FE3 /* Models */,
 				4C31B19E220F94DF00D58FE3 /* SetPaymentCardViewController.swift */,
 				4C31B1A0220F956000D58FE3 /* SetPaymentCardViewModel.swift */,
 			);
 			path = SetPaymentCard;
+			sourceTree = "<group>";
+		};
+		4C31B1A2220FA77700D58FE3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1A3220FA78800D58FE3 /* Reachability */,
+				4C31B1AA220FA7D000D58FE3 /* Endpoints */,
+				4C31B1AD220FA80300D58FE3 /* Protocols */,
+				4C31B1B4220FA85900D58FE3 /* Responses */,
+				4C31B1B7220FA89000D58FE3 /* URLSessionProvider.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4C31B1A3220FA78800D58FE3 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1A5220FA7A700D58FE3 /* Reachability.h */,
+				4C31B1A6220FA7A700D58FE3 /* Reachability.m */,
+				4C31B1A4220FA7A600D58FE3 /* MercadoLibreTest-Bridging-Header.h */,
+				4C31B1A8220FA7BF00D58FE3 /* InternetConnection.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		4C31B1AA220FA7D000D58FE3 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1AB220FA7DB00D58FE3 /* APIEndpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		4C31B1AD220FA80300D58FE3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1AE220FA81800D58FE3 /* ServiceProtocol.swift */,
+				4C31B1B0220FA83800D58FE3 /* ProviderProtocol.swift */,
+				4C31B1B2220FA84C00D58FE3 /* URLSessionProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4C31B1B4220FA85900D58FE3 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1B5220FA87500D58FE3 /* NetworkResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		4C31B1BD220FAA3D00D58FE3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1C0220FAA6700D58FE3 /* Filters */,
+				4C31B1BE220FAA4D00D58FE3 /* PaymentCardService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4C31B1C0220FAA6700D58FE3 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1C1220FAA7600D58FE3 /* PaymentCardFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		4C31B1C3220FAB9B00D58FE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4C97FF80220F77F40044DDD2 = {
@@ -126,6 +230,7 @@
 				4C97FFA6220F793E0044DDD2 /* Core */,
 				4C97FFD0220F815A0044DDD2 /* Commons */,
 				4C97FF9F220F78E60044DDD2 /* Coordinators */,
+				4C31B1A2220FA77700D58FE3 /* Networking */,
 				4C97FFA7220F79590044DDD2 /* View */,
 				4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */,
 				4C97FF98220F77F60044DDD2 /* Info.plist */,
@@ -204,6 +309,8 @@
 				4C97FFB9220F7BE20044DDD2 /* StringExtensions.swift */,
 				4C97FFBB220F7BF60044DDD2 /* ColorExtensions.swift */,
 				4C31B19B220F90FC00D58FE3 /* UIViewControllerExtensions.swift */,
+				4C31B1B9220FA8D100D58FE3 /* URLComponentsExtensions.swift */,
+				4C31B1BB220FA8F000D58FE3 /* URLRequestExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,6 +430,7 @@
 				TargetAttributes = {
 					4C97FF88220F77F50044DDD2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -402,23 +510,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C31B1B3220FA84C00D58FE3 /* URLSessionProtocol.swift in Sources */,
+				4C31B1BC220FA8F000D58FE3 /* URLRequestExtensions.swift in Sources */,
+				4C31B1AC220FA7DB00D58FE3 /* APIEndpoints.swift in Sources */,
 				4C97FFD6220F820B0044DDD2 /* Payment.swift in Sources */,
 				4C31B19F220F94DF00D58FE3 /* SetPaymentCardViewController.swift in Sources */,
 				4C31B19A220F8F0D00D58FE3 /* LoaderButton.swift in Sources */,
 				4C97FFBA220F7BE20044DDD2 /* StringExtensions.swift in Sources */,
+				4C31B1BA220FA8D100D58FE3 /* URLComponentsExtensions.swift in Sources */,
+				4C31B1B1220FA83800D58FE3 /* ProviderProtocol.swift in Sources */,
 				4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */,
 				4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */,
 				4C97FFAF220F7A8C0044DDD2 /* MakePaymentCoordinator.swift in Sources */,
 				4C97FFC0220F7E6E0044DDD2 /* PaymentsCoordinator.swift in Sources */,
 				4C97FFA5220F79200044DDD2 /* AppCoordinator.swift in Sources */,
+				4C31B1BF220FAA4D00D58FE3 /* PaymentCardService.swift in Sources */,
 				4C97FFAC220F7A550044DDD2 /* AmountViewController.swift in Sources */,
 				4C97FFCA220F80370044DDD2 /* PaymentTableViewCell.swift in Sources */,
+				4C31B1B6220FA87500D58FE3 /* NetworkResponse.swift in Sources */,
 				4C97FFCD220F80960044DDD2 /* PaymentCellViewModel.swift in Sources */,
+				4C31B1A9220FA7BF00D58FE3 /* InternetConnection.swift in Sources */,
 				4C97FFBC220F7BF60044DDD2 /* ColorExtensions.swift in Sources */,
 				4C31B19C220F90FC00D58FE3 /* UIViewControllerExtensions.swift in Sources */,
 				4C97FFCF220F81190044DDD2 /* PaymentsViewModel.swift in Sources */,
 				4C97FFC7220F800E0044DDD2 /* CellProtocol.swift in Sources */,
+				4C31B1C5220FABA400D58FE3 /* PaymentMethod.swift in Sources */,
+				4C31B1C2220FAA7600D58FE3 /* PaymentCardFilter.swift in Sources */,
+				4C31B1B8220FA89000D58FE3 /* URLSessionProvider.swift in Sources */,
 				4C97FFA1220F78F40044DDD2 /* Coordinator.swift in Sources */,
+				4C31B1AF220FA81800D58FE3 /* ServiceProtocol.swift in Sources */,
+				4C31B1A7220FA7A700D58FE3 /* Reachability.m in Sources */,
 				4C97FFC2220F7E820044DDD2 /* PaymentsViewController.swift in Sources */,
 				4C31B1A1220F956000D58FE3 /* SetPaymentCardViewModel.swift in Sources */,
 				4C97FFA9220F79700044DDD2 /* ViewModel.swift in Sources */,
@@ -574,6 +695,8 @@
 			baseConfigurationReference = 6A119B8B59A1F62B4EB4B1C7 /* Pods-MercadoLibreTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "https://api.mercadopago.com/v1/";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = V8B4THN48A;
 				INFOPLIST_FILE = MercadoLibreTest/Info.plist;
@@ -582,9 +705,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MERCADO_PAGO_KEY = "TEST-3b338cc9-863d-4bd1-bf1c-41651942f565";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronteq.MercadoLibreTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Development Profile Wildcard";
+				SWIFT_OBJC_BRIDGING_HEADER = "MercadoLibreTest/Networking/Reachability/MercadoLibreTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -595,6 +721,8 @@
 			baseConfigurationReference = FA31B41BAFEDCD6CB44453FC /* Pods-MercadoLibreTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "https://api.mercadopago.com/v1/";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MercadoLibreTest/Info.plist;
@@ -603,9 +731,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MERCADO_PAGO_KEY = "TEST-3b338cc9-863d-4bd1-bf1c-41651942f565";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronteq.MercadoLibreTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MercadoLibreTest/Networking/Reachability/MercadoLibreTest-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
