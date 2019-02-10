@@ -142,7 +142,11 @@ extension SetPaymentCardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DefaultTableViewCell.identifier, for: indexPath) as? DefaultTableViewCell else { return UITableViewCell() }
         cell.titleLabel.text = viewModel.title(for: indexPath)
-        cell.contentImageView.sd_setImage(with: viewModel.imageUrl(for: indexPath), placeholderImage: nil, options: [], completed: nil)
+        cell.contentImageView.sd_setImage(with: viewModel.imageUrl(for: indexPath)) { (_, error, _, _) in
+            if error != nil {
+                cell.setDefaultImage(emptyImage: true)
+            }
+        }
         return cell
     }
     

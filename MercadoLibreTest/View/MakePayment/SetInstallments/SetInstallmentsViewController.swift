@@ -34,7 +34,7 @@ class SetInstallmentsViewController: UIViewController, Alertable {
         stepper.translatesAutoresizingMaskIntoConstraints = false
         stepper.minimumValue = 1
         stepper.isContinuous = true
-        stepper.tintColor = .orange
+        stepper.tintColor = .customOrange
         stepper.addTarget(self, action: #selector(setInstallments), for: .valueChanged)
         return stepper
     }()

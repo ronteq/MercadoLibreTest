@@ -38,7 +38,7 @@ class LoaderButton: UIButton {
     }
     
     private func setup() {
-        backgroundColor = .orange
+        backgroundColor = .customOrange
         layer.cornerRadius = 10
         clipsToBounds = true
         setTitleColor(.white, for: .normal)

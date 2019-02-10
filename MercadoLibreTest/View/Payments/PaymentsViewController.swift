@@ -73,8 +73,10 @@ extension PaymentsViewController {
     
     private func setupViewModel() {
         viewModel.paymentsDidLoad = { [weak self] in
-            self?.tableView.reloadData()
+            self?.showResults()
         }
+        
+        viewModel.getPayments()
     }
     
 }
@@ -82,6 +84,11 @@ extension PaymentsViewController {
 // MARK: - Helper methods
 
 extension PaymentsViewController {
+    
+    private func showResults() {
+        tableView.reloadData()
+        tableView.backgroundView = viewModel.totalPayments == 0 ? emptyView : nil
+    }
     
     @objc
     private func addPayment() {

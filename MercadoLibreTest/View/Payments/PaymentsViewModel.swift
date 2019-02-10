@@ -23,7 +23,6 @@ class PaymentsViewModel: ViewModel {
         self.paymentRepository = paymentRepository
         super.init()
         NotificationCenter.default.addObserver(self, selector: #selector(paymentsDidUpdate), name: .paymentDidSave, object: nil)
-        getPayments()
     }
     
     deinit {
@@ -45,7 +44,9 @@ extension PaymentsViewModel {
     func getPayments() {
         paymentRepository.getPayments { [weak self] response in
             switch response {
-            case .success(let payments): self?.payments = payments
+            case .success(let payments):
+                self?.payments = payments
+                self?.paymentsDidLoad?()
             case .failure(let error): print(error)
             }
         }
@@ -66,7 +67,6 @@ extension PaymentsViewModel {
     @objc
     private func paymentsDidUpdate() {
         getPayments()
-        paymentsDidLoad?()
     }
     
 }

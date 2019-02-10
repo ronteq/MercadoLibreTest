@@ -15,12 +15,20 @@ class DefaultTableViewCell: UITableViewCell, CellProtocol {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        tintColor = .customOrange
         selectionStyle = .none
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         contentImageView.image = nil
+        setDefaultImage(emptyImage: false)
+    }
+    
+    func setDefaultImage(emptyImage: Bool) {
+        contentImageView.backgroundColor = emptyImage ? .customGray : .clear
+        contentImageView.clipsToBounds = emptyImage ? true : false
+        contentImageView.layer.cornerRadius = emptyImage ? 10 : 0
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
