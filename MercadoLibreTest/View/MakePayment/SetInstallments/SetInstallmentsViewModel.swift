@@ -19,6 +19,7 @@ class SetInstallmentsViewModel: ViewModel {
     private let payment: Payment
     private(set) var installments: Int = 1 {
         didSet {
+            payment.installments = installments
             installmentsDidChange?()
         }
     }

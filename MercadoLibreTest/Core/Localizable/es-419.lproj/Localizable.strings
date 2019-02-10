@@ -33,3 +33,6 @@
 
 // MARK: - SetInstallmentsViewController
 "set_installments_title" = "¿Cuántas cuotas?";
+
+// MARK: - DetailPaymentViewController
+"set_detail_payment_title" = "Detalle del pago";

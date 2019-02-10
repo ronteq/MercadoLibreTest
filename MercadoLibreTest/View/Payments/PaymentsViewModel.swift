@@ -10,6 +10,7 @@ import Foundation
 
 protocol PaymentsViewModelDelegate: class {
     func paymentsViewModelDidPressedAddButton(_ paymentsViewModel: PaymentsViewModel)
+    func paymentsViewModelDidPressedPayment(_ paymentsViewModel: PaymentsViewModel, payment: Payment)
 }
 
 class PaymentsViewModel: ViewModel {
@@ -56,6 +57,10 @@ extension PaymentsViewModel {
     
     func makePayment() {
         delegate?.paymentsViewModelDidPressedAddButton(self)
+    }
+    
+    func didSelect(at indexPath: IndexPath) {
+        delegate?.paymentsViewModelDidPressedPayment(self, payment: payments[indexPath.row])
     }
     
     @objc

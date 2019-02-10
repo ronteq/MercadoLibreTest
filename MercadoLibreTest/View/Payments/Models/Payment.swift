@@ -9,7 +9,8 @@
 import Foundation
 
 class Payment {
-    var title = "Probando"
+    var title = ""
+    var message = ""
     var amount = 0
     var installments = 0
     var paymentMethod: PaymentMethod?
