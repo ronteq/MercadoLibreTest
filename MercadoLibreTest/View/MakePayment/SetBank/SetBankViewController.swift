@@ -1,5 +1,5 @@
 //
-//  SetPaymentCardViewController.swift
+//  SetBankViewController.swift
 //  MercadoLibreTest
 //
 //  Created by Daniel Fernandez on 2/9/19.
@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class SetPaymentCardViewController: UIViewController {
+class SetBankViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         let tv = UITableView()
@@ -30,9 +30,9 @@ class SetPaymentCardViewController: UIViewController {
         return button
     }()
     
-    private let viewModel: SetPaymentCardViewModel
+    private let viewModel: SetBankViewModel
     
-    init(viewModel: SetPaymentCardViewModel) {
+    init(viewModel: SetBankViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -45,7 +45,7 @@ class SetPaymentCardViewController: UIViewController {
 
 // MARK: - Life cycle
 
-extension SetPaymentCardViewController {
+extension SetBankViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,7 @@ extension SetPaymentCardViewController {
 
 // MARK: - Initial setup
 
-extension SetPaymentCardViewController {
+extension SetBankViewController {
     
     private func initialSetup() {
         view.backgroundColor = .customGray
@@ -87,7 +87,7 @@ extension SetPaymentCardViewController {
     }
     
     private func setupViewModel() {
-        viewModel.paymentMethodsDidLoad = { [weak self] in
+        viewModel.banksDidLoad = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
@@ -97,14 +97,14 @@ extension SetPaymentCardViewController {
             self?.nextButton.shouldEnable = shouldEnable
         }
         
-        viewModel.getPaymentMethods()
+        viewModel.getBanks()
     }
     
 }
 
 // MARK: - Handler methods
 
-extension SetPaymentCardViewController {
+extension SetBankViewController {
     
     @objc
     private func nextPressed() {
@@ -115,28 +115,28 @@ extension SetPaymentCardViewController {
 
 // MARK: - UITableViewDelegate
 
-extension SetPaymentCardViewController: UITableViewDelegate {
+extension SetBankViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.shouldSelectPaymentMethod(at: indexPath, select: true)
+        viewModel.shouldSelectBank(at: indexPath, select: true)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        viewModel.shouldSelectPaymentMethod(at: indexPath, select: false)
+        viewModel.shouldSelectBank(at: indexPath, select: false)
     }
     
 }
 
 // MARK: - UITableViewDataSource
 
-extension SetPaymentCardViewController: UITableViewDataSource {
+extension SetBankViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.totalPaymentMethods
+        return viewModel.totalBanks
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

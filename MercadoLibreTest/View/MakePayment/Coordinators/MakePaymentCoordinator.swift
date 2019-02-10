@@ -46,8 +46,16 @@ extension MakePaymentCoordinator {
     
     func showSetPaymentController() {
         let setPaymentViewModel = SetPaymentCardViewModel()
+        setPaymentViewModel.delegate = self
         let setPaymentController = SetPaymentCardViewController(viewModel: setPaymentViewModel)
         navigationController.pushViewController(setPaymentController, animated: true)
+    }
+    
+    func showSetBankController(with selectedPaymentMethod: PaymentMethod) {
+        let bankViewModel = SetBankViewModel(selectedPaymentMethod: selectedPaymentMethod)
+        bankViewModel.delegate = self
+        let bankController = SetBankViewController(viewModel: bankViewModel)
+        navigationController.pushViewController(bankController, animated: true)
     }
     
 }
@@ -62,6 +70,27 @@ extension MakePaymentCoordinator: AmountViewModelDelegate {
     
     func amountViewModelNextDidPressed(_ amountViewModel: AmountViewModel) {
         showSetPaymentController()
+    }
+    
+}
+
+// MARK: - SetPaymentCardViewModelDelegate
+
+extension MakePaymentCoordinator: SetPaymentCardViewModelDelegate {
+    
+    func setPaymentCardViewModelNextDidPressed(_ setPaymentCardViewModel: SetPaymentCardViewModel) {
+        guard let selectedPaymentMethod = setPaymentCardViewModel.selectedPaymentMethod else { return }
+        showSetBankController(with: selectedPaymentMethod)
+    }
+    
+}
+
+// MARK: - SetBankViewModelDelegate
+
+extension MakePaymentCoordinator: SetBankViewModelDelegate {
+    
+    func setBankViewModelNextDidPressed(_ setBankViewModel: SetBankViewModel) {
+        
     }
     
 }

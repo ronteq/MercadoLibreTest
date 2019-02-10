@@ -7,4 +7,6 @@ target 'MercadoLibreTest' do
 
   # Pods for MercadoLibreTest
   pod 'SwiftLint'
+  pod 'SDWebImage', '~> 4.0'
+
 end

@@ -14,4 +14,8 @@ struct APIEndpoints {
         static let methods = "payment_methods"
     }
     
+    struct Banks {
+        static let banks = "payment_methods/card_issuers"
+    }
+    
 }

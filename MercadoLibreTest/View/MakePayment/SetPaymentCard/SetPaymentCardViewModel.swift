@@ -8,13 +8,22 @@
 
 import Foundation
 
+protocol SetPaymentCardViewModelDelegate: class {
+    func setPaymentCardViewModelNextDidPressed(_ setPaymentCardViewModel: SetPaymentCardViewModel)
+}
+
 class SetPaymentCardViewModel: ViewModel {
     
     private let sessionProvider: ProviderProtocol
     private var paymentMethods: [PaymentMethod] = []
+    weak var delegate: SetPaymentCardViewModelDelegate?
     
     init(sessionProvider: ProviderProtocol = URLSessionProvider()) {
         self.sessionProvider = sessionProvider
+    }
+    
+    var selectedPaymentMethod: PaymentMethod? {
+        return paymentMethods.first(where: { $0.isSelected })
     }
     
     var totalPaymentMethods: Int {
@@ -25,7 +34,28 @@ class SetPaymentCardViewModel: ViewModel {
         return paymentMethods[indexPath.row].name
     }
     
+    func imageUrl(for indexPath: IndexPath) -> URL? {
+        return URL(string: paymentMethods[indexPath.row].imageUrl)
+    }
+    
+    func shouldSelectPaymentMethod(at indexPath: IndexPath, select: Bool) {
+        paymentMethods[indexPath.row].isSelected = select
+        let shouldEnableButton = paymentMethods.first(where: { $0.isSelected }) != nil
+        nextButtonShouldEnable?(shouldEnableButton)
+    }
+    
     var paymentMethodsDidLoad: (() -> Void)?
+    var nextButtonShouldEnable: ((Bool) -> Void)?
+    
+}
+
+// MARK: - Helper methods
+
+extension SetPaymentCardViewModel {
+    
+    func nextButtonPressed() {
+        delegate?.setPaymentCardViewModelNextDidPressed(self)
+    }
     
 }
 

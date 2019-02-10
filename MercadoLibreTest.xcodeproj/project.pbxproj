@@ -27,6 +27,11 @@
 		4C31B1C5220FABA400D58FE3 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */; };
 		4C31B1C9220FB09000D58FE3 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C7220FB09000D58FE3 /* DefaultTableViewCell.swift */; };
 		4C31B1CA220FB09000D58FE3 /* DefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C31B1C8220FB09000D58FE3 /* DefaultTableViewCell.xib */; };
+		4C31B1CD220FBE4800D58FE3 /* SetBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1CC220FBE4800D58FE3 /* SetBankViewController.swift */; };
+		4C31B1CF220FBE6D00D58FE3 /* SetBankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1CE220FBE6D00D58FE3 /* SetBankViewModel.swift */; };
+		4C31B1D2220FC25600D58FE3 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1D1220FC25600D58FE3 /* Bank.swift */; };
+		4C31B1D5220FC2B000D58FE3 /* BankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1D4220FC2B000D58FE3 /* BankService.swift */; };
+		4C31B1D8220FC2DB00D58FE3 /* BankFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1D7220FC2DB00D58FE3 /* BankFilter.swift */; };
 		4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */; };
 		4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF93220F77F60044DDD2 /* Assets.xcassets */; };
 		4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF95220F77F60044DDD2 /* LaunchScreen.storyboard */; };
@@ -74,6 +79,11 @@
 		4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 		4C31B1C7220FB09000D58FE3 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		4C31B1C8220FB09000D58FE3 /* DefaultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableViewCell.xib; sourceTree = "<group>"; };
+		4C31B1CC220FBE4800D58FE3 /* SetBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBankViewController.swift; sourceTree = "<group>"; };
+		4C31B1CE220FBE6D00D58FE3 /* SetBankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBankViewModel.swift; sourceTree = "<group>"; };
+		4C31B1D1220FC25600D58FE3 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		4C31B1D4220FC2B000D58FE3 /* BankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankService.swift; sourceTree = "<group>"; };
+		4C31B1D7220FC2DB00D58FE3 /* BankFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankFilter.swift; sourceTree = "<group>"; };
 		4C97FF89220F77F50044DDD2 /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97FF93220F77F60044DDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -218,6 +228,42 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4C31B1CB220FBE3100D58FE3 /* SetBank */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1D3220FC29E00D58FE3 /* Services */,
+				4C31B1D0220FC24000D58FE3 /* Models */,
+				4C31B1CC220FBE4800D58FE3 /* SetBankViewController.swift */,
+				4C31B1CE220FBE6D00D58FE3 /* SetBankViewModel.swift */,
+			);
+			path = SetBank;
+			sourceTree = "<group>";
+		};
+		4C31B1D0220FC24000D58FE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1D1220FC25600D58FE3 /* Bank.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4C31B1D3220FC29E00D58FE3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1D6220FC2CA00D58FE3 /* Filters */,
+				4C31B1D4220FC2B000D58FE3 /* BankService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4C31B1D6220FC2CA00D58FE3 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1D7220FC2DB00D58FE3 /* BankFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		4C97FF80220F77F40044DDD2 = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +342,7 @@
 				4C97FFAD220F7A7E0044DDD2 /* Coordinators */,
 				4C97FFC3220F7F870044DDD2 /* SetAmount */,
 				4C31B19D220F948300D58FE3 /* SetPaymentCard */,
+				4C31B1CB220FBE3100D58FE3 /* SetBank */,
 			);
 			path = MakePayment;
 			sourceTree = "<group>";
@@ -422,6 +469,7 @@
 				4C97FF86220F77F50044DDD2 /* Frameworks */,
 				4C97FF87220F77F50044DDD2 /* Resources */,
 				4C97FFD8220F84880044DDD2 /* ShellScript */,
+				367DE99013B78A5CF015E6CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -501,6 +549,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		367DE99013B78A5CF015E6CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadoLibreTest/Pods-MercadoLibreTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MercadoLibreTest/Pods-MercadoLibreTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4C97FFD8220F84880044DDD2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,6 +604,7 @@
 				4C97FFBA220F7BE20044DDD2 /* StringExtensions.swift in Sources */,
 				4C31B1BA220FA8D100D58FE3 /* URLComponentsExtensions.swift in Sources */,
 				4C31B1B1220FA83800D58FE3 /* ProviderProtocol.swift in Sources */,
+				4C31B1D5220FC2B000D58FE3 /* BankService.swift in Sources */,
 				4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */,
 				4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */,
 				4C97FFAF220F7A8C0044DDD2 /* MakePaymentCoordinator.swift in Sources */,
@@ -544,13 +615,17 @@
 				4C97FFCA220F80370044DDD2 /* PaymentTableViewCell.swift in Sources */,
 				4C31B1B6220FA87500D58FE3 /* NetworkResponse.swift in Sources */,
 				4C97FFCD220F80960044DDD2 /* PaymentCellViewModel.swift in Sources */,
+				4C31B1D8220FC2DB00D58FE3 /* BankFilter.swift in Sources */,
 				4C31B1A9220FA7BF00D58FE3 /* InternetConnection.swift in Sources */,
 				4C97FFBC220F7BF60044DDD2 /* ColorExtensions.swift in Sources */,
 				4C31B19C220F90FC00D58FE3 /* UIViewControllerExtensions.swift in Sources */,
 				4C97FFCF220F81190044DDD2 /* PaymentsViewModel.swift in Sources */,
 				4C97FFC7220F800E0044DDD2 /* CellProtocol.swift in Sources */,
+				4C31B1D2220FC25600D58FE3 /* Bank.swift in Sources */,
 				4C31B1C5220FABA400D58FE3 /* PaymentMethod.swift in Sources */,
 				4C31B1C9220FB09000D58FE3 /* DefaultTableViewCell.swift in Sources */,
+				4C31B1CD220FBE4800D58FE3 /* SetBankViewController.swift in Sources */,
+				4C31B1CF220FBE6D00D58FE3 /* SetBankViewModel.swift in Sources */,
 				4C31B1C2220FAA7600D58FE3 /* PaymentCardFilter.swift in Sources */,
 				4C31B1B8220FA89000D58FE3 /* URLSessionProvider.swift in Sources */,
 				4C97FFA1220F78F40044DDD2 /* Coordinator.swift in Sources */,
