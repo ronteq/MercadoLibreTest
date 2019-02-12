@@ -20,6 +20,14 @@ struct PaymentMethod: Decodable {
     var imageUrl: String
     var isSelected: Bool = false
     
+    init(id: String, name: String, status: String, imageUrl: String, isSelected: Bool) {
+        self.id = id
+        self.name = name
+        self.status = status
+        self.imageUrl = imageUrl
+        self.isSelected = isSelected
+    }
+    
     init(with cdPaymentMethod: String) {
         self.id = ""
         self.name = cdPaymentMethod
@@ -36,5 +44,11 @@ struct PaymentMethod: Decodable {
         case name
         case status
         case imageUrl = "secure_thumbnail"
+    }
+}
+
+extension PaymentMethod {
+    static func with(id: String = "", name: String = "", status: String = "", imageUrl: String = "", isSelected: Bool = false) -> PaymentMethod {
+        return PaymentMethod(id: id, name: name, status: status, imageUrl: imageUrl, isSelected: isSelected)
     }
 }

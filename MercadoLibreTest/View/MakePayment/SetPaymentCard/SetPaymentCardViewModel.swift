@@ -73,7 +73,7 @@ extension SetPaymentCardViewModel {
             let filter = PaymentCardFilter()
             sessionProvider.request(type: [PaymentMethod].self, service: PaymentCardService.methods(filter)) { [weak self] response in
                 switch response {
-                case .failure: self?.paymentMethodsDidFail?("server_error".localized())
+                case .failure(let responseError): self?.handleError(responseError: responseError)
                 case .success(let paymentMethods):
                     self?.paymentMethods = paymentMethods.filter { $0.statusType == .active }
                     self?.paymentMethodsDidLoad?()
@@ -81,6 +81,13 @@ extension SetPaymentCardViewModel {
             }
         } else {
             paymentMethodsDidFail?("no_internet".localized())
+        }
+    }
+    
+    private func handleError(responseError: ResponseError) {
+        switch responseError {
+        case .noData: paymentMethodsDidFail?("server_error".localized())
+        case .unknown(let message): paymentMethodsDidFail?(message)
         }
     }
     

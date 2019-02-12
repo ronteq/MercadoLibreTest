@@ -75,7 +75,7 @@ extension SetBankViewModel {
             filter.paymentMethod = paymentMethodId
             sessionProvider.request(type: [Bank].self, service: BankService.banks(filter)) { [weak self] response in
                 switch response {
-                case .failure: self?.banksDidFail?("server_error".localized())
+                case .failure(let responseError): self?.handleError(responseError: responseError)
                 case .success(let banks):
                     self?.banks = banks
                     self?.banksDidLoad?()
@@ -83,6 +83,13 @@ extension SetBankViewModel {
             }
         } else {
             banksDidFail?("no_internet".localized())
+        }
+    }
+    
+    private func handleError(responseError: ResponseError) {
+        switch responseError {
+        case .noData: banksDidFail?("server_error".localized())
+        case .unknown(let message): banksDidFail?(message)
         }
     }
     

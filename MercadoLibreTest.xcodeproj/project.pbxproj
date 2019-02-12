@@ -56,6 +56,8 @@
 		4C31B21422109AA600D58FE3 /* CanShowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B21322109AA600D58FE3 /* CanShowError.swift */; };
 		4C31B2162210A0FD00D58FE3 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B2152210A0FD00D58FE3 /* Loader.swift */; };
 		4C31B2182210A11800D58FE3 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B2172210A11800D58FE3 /* Loadable.swift */; };
+		4C31B22922124BD900D58FE3 /* PaymentsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B22822124BD900D58FE3 /* PaymentsViewModelTests.swift */; };
+		4C31B22C22124C4800D58FE3 /* MockPaymentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B22B22124C4800D58FE3 /* MockPaymentRepository.swift */; };
 		4C97FF8D220F77F50044DDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */; };
 		4C97FF94220F77F60044DDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF93220F77F60044DDD2 /* Assets.xcassets */; };
 		4C97FF97220F77F60044DDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97FF95220F77F60044DDD2 /* LaunchScreen.storyboard */; };
@@ -78,7 +80,20 @@
 		4C97FFD3220F816E0044DDD2 /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */; };
 		4C97FFD6220F820B0044DDD2 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFD5220F820B0044DDD2 /* Payment.swift */; };
 		4C97FFDA220F89C10044DDD2 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97FFD9220F89C10044DDD2 /* AmountViewModel.swift */; };
+		4CEF29EE221254B200443F1E /* AmountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF29ED221254B200443F1E /* AmountViewModelTests.swift */; };
+		4CEF29F12212579400443F1E /* SetPaymentCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF29F02212579400443F1E /* SetPaymentCardViewModelTests.swift */; };
+		4CEF29F42212585400443F1E /* MockUrlSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF29F32212585400443F1E /* MockUrlSessionProvider.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C31B22222124B5D00D58FE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C97FF81220F77F40044DDD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C97FF88220F77F50044DDD2;
+			remoteInfo = MercadoLibreTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4A69599F5956419DAA467D54 /* Pods_MercadoLibreTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLibreTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +147,10 @@
 		4C31B21322109AA600D58FE3 /* CanShowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanShowError.swift; sourceTree = "<group>"; };
 		4C31B2152210A0FD00D58FE3 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		4C31B2172210A11800D58FE3 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		4C31B21D22124B5D00D58FE3 /* MercadoLibreTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoLibreTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C31B22122124B5D00D58FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C31B22822124BD900D58FE3 /* PaymentsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewModelTests.swift; sourceTree = "<group>"; };
+		4C31B22B22124C4800D58FE3 /* MockPaymentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPaymentRepository.swift; sourceTree = "<group>"; };
 		4C97FF89220F77F50044DDD2 /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97FF93220F77F60044DDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,11 +177,21 @@
 		4C97FFD2220F816E0044DDD2 /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
 		4C97FFD5220F820B0044DDD2 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		4C97FFD9220F89C10044DDD2 /* AmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModel.swift; sourceTree = "<group>"; };
+		4CEF29ED221254B200443F1E /* AmountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModelTests.swift; sourceTree = "<group>"; };
+		4CEF29F02212579400443F1E /* SetPaymentCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPaymentCardViewModelTests.swift; sourceTree = "<group>"; };
+		4CEF29F32212585400443F1E /* MockUrlSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlSessionProvider.swift; sourceTree = "<group>"; };
 		6A119B8B59A1F62B4EB4B1C7 /* Pods-MercadoLibreTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLibreTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLibreTest/Pods-MercadoLibreTest.debug.xcconfig"; sourceTree = "<group>"; };
 		FA31B41BAFEDCD6CB44453FC /* Pods-MercadoLibreTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLibreTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoLibreTest/Pods-MercadoLibreTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C31B21A22124B5D00D58FE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C97FF86220F77F50044DDD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,10 +435,40 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4C31B21E22124B5D00D58FE3 /* MercadoLibreTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CEF29EF2212572E00443F1E /* SetPaymentCard */,
+				4CEF29EC2212545000443F1E /* SetAmount */,
+				4C31B22722124B6700D58FE3 /* Payments */,
+				4CEF29F32212585400443F1E /* MockUrlSessionProvider.swift */,
+				4C31B22122124B5D00D58FE3 /* Info.plist */,
+			);
+			path = MercadoLibreTestTests;
+			sourceTree = "<group>";
+		};
+		4C31B22722124B6700D58FE3 /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B22A22124C3400D58FE3 /* Mocks */,
+				4C31B22822124BD900D58FE3 /* PaymentsViewModelTests.swift */,
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		4C31B22A22124C3400D58FE3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B22B22124C4800D58FE3 /* MockPaymentRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		4C97FF80220F77F40044DDD2 = {
 			isa = PBXGroup;
 			children = (
 				4C97FF8B220F77F50044DDD2 /* MercadoLibreTest */,
+				4C31B21E22124B5D00D58FE3 /* MercadoLibreTestTests */,
 				4C97FF8A220F77F50044DDD2 /* Products */,
 				6D152C0DC13BEC2CEA78C3E9 /* Pods */,
 				2170D68C00B360016BBBC6D1 /* Frameworks */,
@@ -420,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				4C97FF89220F77F50044DDD2 /* MercadoLibreTest.app */,
+				4C31B21D22124B5D00D58FE3 /* MercadoLibreTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -600,6 +660,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4CEF29EC2212545000443F1E /* SetAmount */ = {
+			isa = PBXGroup;
+			children = (
+				4CEF29ED221254B200443F1E /* AmountViewModelTests.swift */,
+			);
+			path = SetAmount;
+			sourceTree = "<group>";
+		};
+		4CEF29EF2212572E00443F1E /* SetPaymentCard */ = {
+			isa = PBXGroup;
+			children = (
+				4CEF29F02212579400443F1E /* SetPaymentCardViewModelTests.swift */,
+			);
+			path = SetPaymentCard;
+			sourceTree = "<group>";
+		};
 		6D152C0DC13BEC2CEA78C3E9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +688,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C31B21C22124B5D00D58FE3 /* MercadoLibreTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C31B22422124B5D00D58FE3 /* Build configuration list for PBXNativeTarget "MercadoLibreTestTests" */;
+			buildPhases = (
+				4C31B21922124B5D00D58FE3 /* Sources */,
+				4C31B21A22124B5D00D58FE3 /* Frameworks */,
+				4C31B21B22124B5D00D58FE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C31B22322124B5D00D58FE3 /* PBXTargetDependency */,
+			);
+			name = MercadoLibreTestTests;
+			productName = MercadoLibreTestTests;
+			productReference = 4C31B21D22124B5D00D58FE3 /* MercadoLibreTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4C97FF88220F77F50044DDD2 /* MercadoLibreTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C97FF9B220F77F60044DDD2 /* Build configuration list for PBXNativeTarget "MercadoLibreTest" */;
@@ -642,6 +736,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = ronteq;
 				TargetAttributes = {
+					4C31B21C22124B5D00D58FE3 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 4C97FF88220F77F50044DDD2;
+					};
 					4C97FF88220F77F50044DDD2 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -663,11 +761,19 @@
 			projectRoot = "";
 			targets = (
 				4C97FF88220F77F50044DDD2 /* MercadoLibreTest */,
+				4C31B21C22124B5D00D58FE3 /* MercadoLibreTestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C31B21B22124B5D00D58FE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C97FF87220F77F50044DDD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -744,6 +850,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C31B21922124B5D00D58FE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEF29F12212579400443F1E /* SetPaymentCardViewModelTests.swift in Sources */,
+				4C31B22C22124C4800D58FE3 /* MockPaymentRepository.swift in Sources */,
+				4CEF29F42212585400443F1E /* MockUrlSessionProvider.swift in Sources */,
+				4CEF29EE221254B200443F1E /* AmountViewModelTests.swift in Sources */,
+				4C31B22922124BD900D58FE3 /* PaymentsViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C97FF85220F77F50044DDD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -817,6 +935,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4C31B22322124B5D00D58FE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C97FF88220F77F50044DDD2 /* MercadoLibreTest */;
+			targetProxy = 4C31B22222124B5D00D58FE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		4C97FF95220F77F60044DDD2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -839,6 +965,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C31B22522124B5D00D58FE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V8B4THN48A;
+				INFOPLIST_FILE = MercadoLibreTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronteq.MercadoLibreTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoLibreTest.app/MercadoLibreTest";
+			};
+			name = Debug;
+		};
+		4C31B22622124B5D00D58FE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V8B4THN48A;
+				INFOPLIST_FILE = MercadoLibreTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronteq.MercadoLibreTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoLibreTest.app/MercadoLibreTest";
+			};
+			name = Release;
+		};
 		4C97FF99220F77F60044DDD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1011,6 +1177,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C31B22422124B5D00D58FE3 /* Build configuration list for PBXNativeTarget "MercadoLibreTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C31B22522124B5D00D58FE3 /* Debug */,
+				4C31B22622124B5D00D58FE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4C97FF84220F77F40044DDD2 /* Build configuration list for PBXProject "MercadoLibreTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

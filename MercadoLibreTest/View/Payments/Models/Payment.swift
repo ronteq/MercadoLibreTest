@@ -29,3 +29,19 @@ class Payment {
     }
     
 }
+
+extension Payment {
+    
+    static func with(title: String = "test", message: String = "", amount: Int = 0, installments: Int = 0, paymentMethod: PaymentMethod? = nil, bank: Bank? = nil, createdAt: Date = Date()) -> Payment {
+        let payment = Payment()
+        payment.title = title
+        payment.message = message
+        payment.amount = amount
+        payment.installments = installments
+        payment.paymentMethod = paymentMethod
+        payment.bank = bank
+        payment.createdAt = createdAt
+        return payment
+    }
+    
+}

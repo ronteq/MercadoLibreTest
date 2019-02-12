@@ -15,7 +15,7 @@ protocol AmountViewModelDelegate: class {
 
 class AmountViewModel: ViewModel {
     
-    private var amount: Int = 0
+    private(set) var amount: Int = 0
     weak var delegate: AmountViewModelDelegate?
     
     var nextButtonShouldEnable: ((Bool) -> Void)?

@@ -52,7 +52,7 @@ extension SetInstallmentsViewModel {
         
         sessionProvider.request(type: [PaymentResponse].self, service: InstallmentsService.payment(filter)) { [weak self] response in
             switch response {
-            case .failure: self?.noInstallmentsAvailable?("server_error".localized())
+            case .failure(let responseError): self?.handleError(responseError: responseError)
             case .success(let paymentResponses):
                 guard let payer = paymentResponses.first?.payers.first(where: { $0.installments == self?.installments }) else {
                     self?.noInstallmentsAvailable?("installments_error".localized())
@@ -62,6 +62,13 @@ extension SetInstallmentsViewModel {
                 self?.payment.message = payer.recommendedMessage
                 self?.recommendedMessageDidLoad?(payer.recommendedMessage)
             }
+        }
+    }
+    
+    private func handleError(responseError: ResponseError) {
+        switch responseError {
+        case .noData: noInstallmentsAvailable?("server_error".localized())
+        case .unknown(let message): noInstallmentsAvailable?(message)
         }
     }
     
