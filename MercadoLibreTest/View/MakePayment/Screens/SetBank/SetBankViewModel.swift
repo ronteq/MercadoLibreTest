@@ -73,7 +73,7 @@ extension SetBankViewModel {
             guard let paymentMethodId = payment.paymentMethod?.id else { return }
             var filter = BankFilter()
             filter.paymentMethod = paymentMethodId
-            sessionProvider.request(type: [Bank].self, service: BankService.banks(filter)) { [weak self] response in
+            sessionProvider.request(type: [Bank].self, service: MakePaymentService.banks(filter)) { [weak self] response in
                 switch response {
                 case .failure(let responseError): self?.handleError(responseError: responseError)
                 case .success(let banks):

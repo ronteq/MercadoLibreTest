@@ -22,7 +22,6 @@
 		4C31B1B8220FA89000D58FE3 /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1B7220FA89000D58FE3 /* URLSessionProvider.swift */; };
 		4C31B1BA220FA8D100D58FE3 /* URLComponentsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1B9220FA8D100D58FE3 /* URLComponentsExtensions.swift */; };
 		4C31B1BC220FA8F000D58FE3 /* URLRequestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1BB220FA8F000D58FE3 /* URLRequestExtensions.swift */; };
-		4C31B1BF220FAA4D00D58FE3 /* PaymentCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1BE220FAA4D00D58FE3 /* PaymentCardService.swift */; };
 		4C31B1C2220FAA7600D58FE3 /* PaymentCardFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C1220FAA7600D58FE3 /* PaymentCardFilter.swift */; };
 		4C31B1C5220FABA400D58FE3 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */; };
 		4C31B1C9220FB09000D58FE3 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1C7220FB09000D58FE3 /* DefaultTableViewCell.swift */; };
@@ -30,12 +29,11 @@
 		4C31B1CD220FBE4800D58FE3 /* SetBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1CC220FBE4800D58FE3 /* SetBankViewController.swift */; };
 		4C31B1CF220FBE6D00D58FE3 /* SetBankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1CE220FBE6D00D58FE3 /* SetBankViewModel.swift */; };
 		4C31B1D2220FC25600D58FE3 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1D1220FC25600D58FE3 /* Bank.swift */; };
-		4C31B1D5220FC2B000D58FE3 /* BankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1D4220FC2B000D58FE3 /* BankService.swift */; };
 		4C31B1D8220FC2DB00D58FE3 /* BankFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1D7220FC2DB00D58FE3 /* BankFilter.swift */; };
 		4C31B1DB221054A500D58FE3 /* SetInstallmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1DA221054A500D58FE3 /* SetInstallmentsViewController.swift */; };
 		4C31B1DD221055DA00D58FE3 /* SetInstallmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1DC221055DA00D58FE3 /* SetInstallmentsViewModel.swift */; };
 		4C31B1E62210602E00D58FE3 /* InstallmentsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1E52210602E00D58FE3 /* InstallmentsFilter.swift */; };
-		4C31B1E8221060BA00D58FE3 /* InstallmentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1E7221060BA00D58FE3 /* InstallmentsService.swift */; };
+		4C31B1E8221060BA00D58FE3 /* MakePaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1E7221060BA00D58FE3 /* MakePaymentService.swift */; };
 		4C31B1EB2210624C00D58FE3 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1EA2210624C00D58FE3 /* PaymentResponse.swift */; };
 		4C31B1ED2210649500D58FE3 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1EC2210649500D58FE3 /* Alertable.swift */; };
 		4C31B1F022106C9C00D58FE3 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C31B1EF22106C9C00D58FE3 /* CoreDataStack.swift */; };
@@ -113,7 +111,6 @@
 		4C31B1B7220FA89000D58FE3 /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
 		4C31B1B9220FA8D100D58FE3 /* URLComponentsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtensions.swift; sourceTree = "<group>"; };
 		4C31B1BB220FA8F000D58FE3 /* URLRequestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtensions.swift; sourceTree = "<group>"; };
-		4C31B1BE220FAA4D00D58FE3 /* PaymentCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardService.swift; sourceTree = "<group>"; };
 		4C31B1C1220FAA7600D58FE3 /* PaymentCardFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardFilter.swift; sourceTree = "<group>"; };
 		4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 		4C31B1C7220FB09000D58FE3 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,12 +118,11 @@
 		4C31B1CC220FBE4800D58FE3 /* SetBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBankViewController.swift; sourceTree = "<group>"; };
 		4C31B1CE220FBE6D00D58FE3 /* SetBankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBankViewModel.swift; sourceTree = "<group>"; };
 		4C31B1D1220FC25600D58FE3 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
-		4C31B1D4220FC2B000D58FE3 /* BankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankService.swift; sourceTree = "<group>"; };
 		4C31B1D7220FC2DB00D58FE3 /* BankFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankFilter.swift; sourceTree = "<group>"; };
 		4C31B1DA221054A500D58FE3 /* SetInstallmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetInstallmentsViewController.swift; sourceTree = "<group>"; };
 		4C31B1DC221055DA00D58FE3 /* SetInstallmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetInstallmentsViewModel.swift; sourceTree = "<group>"; };
 		4C31B1E52210602E00D58FE3 /* InstallmentsFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsFilter.swift; sourceTree = "<group>"; };
-		4C31B1E7221060BA00D58FE3 /* InstallmentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsService.swift; sourceTree = "<group>"; };
+		4C31B1E7221060BA00D58FE3 /* MakePaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePaymentService.swift; sourceTree = "<group>"; };
 		4C31B1EA2210624C00D58FE3 /* PaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
 		4C31B1EC2210649500D58FE3 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		4C31B1EF22106C9C00D58FE3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -214,8 +210,6 @@
 		4C31B19D220F948300D58FE3 /* SetPaymentCard */ = {
 			isa = PBXGroup;
 			children = (
-				4C31B1BD220FAA3D00D58FE3 /* Services */,
-				4C31B1C3220FAB9B00D58FE3 /* Models */,
 				4C31B19E220F94DF00D58FE3 /* SetPaymentCardViewController.swift */,
 				4C31B1A0220F956000D58FE3 /* SetPaymentCardViewModel.swift */,
 			);
@@ -271,27 +265,12 @@
 			path = Responses;
 			sourceTree = "<group>";
 		};
-		4C31B1BD220FAA3D00D58FE3 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				4C31B1C0220FAA6700D58FE3 /* Filters */,
-				4C31B1BE220FAA4D00D58FE3 /* PaymentCardService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		4C31B1C0220FAA6700D58FE3 /* Filters */ = {
-			isa = PBXGroup;
-			children = (
-				4C31B1C1220FAA7600D58FE3 /* PaymentCardFilter.swift */,
-			);
-			path = Filters;
-			sourceTree = "<group>";
-		};
 		4C31B1C3220FAB9B00D58FE3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4C31B1EA2210624C00D58FE3 /* PaymentResponse.swift */,
 				4C31B1C4220FABA400D58FE3 /* PaymentMethod.swift */,
+				4C31B1D1220FC25600D58FE3 /* Bank.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,44 +287,15 @@
 		4C31B1CB220FBE3100D58FE3 /* SetBank */ = {
 			isa = PBXGroup;
 			children = (
-				4C31B1D3220FC29E00D58FE3 /* Services */,
-				4C31B1D0220FC24000D58FE3 /* Models */,
 				4C31B1CC220FBE4800D58FE3 /* SetBankViewController.swift */,
 				4C31B1CE220FBE6D00D58FE3 /* SetBankViewModel.swift */,
 			);
 			path = SetBank;
 			sourceTree = "<group>";
 		};
-		4C31B1D0220FC24000D58FE3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4C31B1D1220FC25600D58FE3 /* Bank.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		4C31B1D3220FC29E00D58FE3 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				4C31B1D6220FC2CA00D58FE3 /* Filters */,
-				4C31B1D4220FC2B000D58FE3 /* BankService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		4C31B1D6220FC2CA00D58FE3 /* Filters */ = {
-			isa = PBXGroup;
-			children = (
-				4C31B1D7220FC2DB00D58FE3 /* BankFilter.swift */,
-			);
-			path = Filters;
-			sourceTree = "<group>";
-		};
 		4C31B1D92210545500D58FE3 /* SetInstallments */ = {
 			isa = PBXGroup;
 			children = (
-				4C31B1E32210601200D58FE3 /* Services */,
-				4C31B1E92210623A00D58FE3 /* Models */,
 				4C31B1DA221054A500D58FE3 /* SetInstallmentsViewController.swift */,
 				4C31B1DC221055DA00D58FE3 /* SetInstallmentsViewModel.swift */,
 			);
@@ -356,7 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				4C31B1E42210602200D58FE3 /* Filters */,
-				4C31B1E7221060BA00D58FE3 /* InstallmentsService.swift */,
+				4C31B1E7221060BA00D58FE3 /* MakePaymentService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -364,17 +314,11 @@
 		4C31B1E42210602200D58FE3 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
+				4C31B1D7220FC2DB00D58FE3 /* BankFilter.swift */,
 				4C31B1E52210602E00D58FE3 /* InstallmentsFilter.swift */,
+				4C31B1C1220FAA7600D58FE3 /* PaymentCardFilter.swift */,
 			);
 			path = Filters;
-			sourceTree = "<group>";
-		};
-		4C31B1E92210623A00D58FE3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4C31B1EA2210624C00D58FE3 /* PaymentResponse.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		4C31B1EE22106B5700D58FE3 /* Persistence */ = {
@@ -543,6 +487,8 @@
 			isa = PBXGroup;
 			children = (
 				4CEF29F9221262FE00443F1E /* Screens */,
+				4C31B1E32210601200D58FE3 /* Services */,
+				4C31B1C3220FAB9B00D58FE3 /* Models */,
 				4C97FFAD220F7A7E0044DDD2 /* Coordinators */,
 			);
 			path = MakePayment;
@@ -903,7 +849,6 @@
 				4C31B2072210865B00D58FE3 /* DetailGeneralItem.swift in Sources */,
 				4C31B1BA220FA8D100D58FE3 /* URLComponentsExtensions.swift in Sources */,
 				4C31B1B1220FA83800D58FE3 /* ProviderProtocol.swift in Sources */,
-				4C31B1D5220FC2B000D58FE3 /* BankService.swift in Sources */,
 				4C31B20F2210892F00D58FE3 /* DetailGeneralTableViewCell.swift in Sources */,
 				4C31B1FF2210750700D58FE3 /* NotificationExtensions.swift in Sources */,
 				4C31B2042210844800D58FE3 /* DetailPaymentViewModel.swift in Sources */,
@@ -914,7 +859,6 @@
 				4C97FFC0220F7E6E0044DDD2 /* PaymentsCoordinator.swift in Sources */,
 				4C97FFA5220F79200044DDD2 /* AppCoordinator.swift in Sources */,
 				4C31B1F622106DE100D58FE3 /* CDPayment+CoreDataClass.swift in Sources */,
-				4C31B1BF220FAA4D00D58FE3 /* PaymentCardService.swift in Sources */,
 				4C97FFAC220F7A550044DDD2 /* AmountViewController.swift in Sources */,
 				4C31B2162210A0FD00D58FE3 /* Loader.swift in Sources */,
 				4C97FFCA220F80370044DDD2 /* PaymentTableViewCell.swift in Sources */,
@@ -950,7 +894,7 @@
 				4C97FFA9220F79700044DDD2 /* ViewModel.swift in Sources */,
 				4C31B1FD22106F7400D58FE3 /* CDPaymentRepository.swift in Sources */,
 				4C97FFDA220F89C10044DDD2 /* AmountViewModel.swift in Sources */,
-				4C31B1E8221060BA00D58FE3 /* InstallmentsService.swift in Sources */,
+				4C31B1E8221060BA00D58FE3 /* MakePaymentService.swift in Sources */,
 				4C31B2182210A11800D58FE3 /* Loadable.swift in Sources */,
 				4C97FFA3220F79070044DDD2 /* RootViewCoordinator.swift in Sources */,
 				4C31B1E62210602E00D58FE3 /* InstallmentsFilter.swift in Sources */,

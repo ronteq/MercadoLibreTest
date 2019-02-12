@@ -1,20 +1,24 @@
 //
-//  BankService.swift
+//  InstallmentsService.swift
 //  MercadoLibreTest
 //
-//  Created by Daniel Fernandez on 2/9/19.
+//  Created by Daniel Fernandez on 2/10/19.
 //  Copyright © 2019 ronteq. All rights reserved.
 //
 
 import Foundation
 
-enum BankService: ServiceProtocol {
+enum MakePaymentService: ServiceProtocol {
     
+    case installments(InstallmentsFilter)
     case banks(BankFilter)
+    case paymentMethods(PaymentCardFilter)
     
     var path: String? {
         switch self {
+        case .installments: return APIEndpoints.Installments.payment
         case .banks: return APIEndpoints.Banks.banks
+        case .paymentMethods: return APIEndpoints.Payment.methods
         }
     }
     
@@ -28,7 +32,9 @@ enum BankService: ServiceProtocol {
     
     var task: Task {
         switch self {
+        case .installments(let filter): return .requestParameters(filter.parameters())
         case .banks(let filter): return .requestParameters(filter.parameters())
+        case .paymentMethods(let filter): return .requestParameters(filter.parameters())
         }
     }
     

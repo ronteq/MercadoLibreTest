@@ -50,7 +50,7 @@ extension SetInstallmentsViewModel {
         filter.bank = bankId
         filter.paymentMethod = paymentMethodId
         
-        sessionProvider.request(type: [PaymentResponse].self, service: InstallmentsService.payment(filter)) { [weak self] response in
+        sessionProvider.request(type: [PaymentResponse].self, service: MakePaymentService.installments(filter)) { [weak self] response in
             switch response {
             case .failure(let responseError): self?.handleError(responseError: responseError)
             case .success(let paymentResponses):

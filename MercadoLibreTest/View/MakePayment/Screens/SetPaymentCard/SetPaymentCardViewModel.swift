@@ -71,7 +71,7 @@ extension SetPaymentCardViewModel {
     func getPaymentMethods() {
         if InternetConnection.isOn() {
             let filter = PaymentCardFilter()
-            sessionProvider.request(type: [PaymentMethod].self, service: PaymentCardService.methods(filter)) { [weak self] response in
+            sessionProvider.request(type: [PaymentMethod].self, service: MakePaymentService.paymentMethods(filter)) { [weak self] response in
                 switch response {
                 case .failure(let responseError): self?.handleError(responseError: responseError)
                 case .success(let paymentMethods):

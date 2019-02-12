@@ -15,7 +15,7 @@ class CoreDataStack {
     
     var persistentContainer: NSPersistentContainer = {
         let pc = NSPersistentContainer(name: "MercadoLibreTest")
-        pc.loadPersistentStores { (storeDescription, error) in
+        pc.loadPersistentStores { (_, error) in
             
             if let error = error {
                 fatalError("Loading store failed: \(error.localizedDescription)")
