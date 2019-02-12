@@ -533,7 +533,6 @@
 			isa = PBXGroup;
 			children = (
 				4C97FFBD220F7E500044DDD2 /* Payments */,
-				4C31B200221083FA00D58FE3 /* DetailPayment */,
 				4C97FFAA220F7A310044DDD2 /* MakePayment */,
 				4C97FFA8220F79700044DDD2 /* ViewModel.swift */,
 			);
@@ -543,11 +542,8 @@
 		4C97FFAA220F7A310044DDD2 /* MakePayment */ = {
 			isa = PBXGroup;
 			children = (
+				4CEF29F9221262FE00443F1E /* Screens */,
 				4C97FFAD220F7A7E0044DDD2 /* Coordinators */,
-				4C97FFC3220F7F870044DDD2 /* SetAmount */,
-				4C31B19D220F948300D58FE3 /* SetPaymentCard */,
-				4C31B1CB220FBE3100D58FE3 /* SetBank */,
-				4C31B1D92210545500D58FE3 /* SetInstallments */,
 			);
 			path = MakePayment;
 			sourceTree = "<group>";
@@ -584,12 +580,8 @@
 		4C97FFBD220F7E500044DDD2 /* Payments */ = {
 			isa = PBXGroup;
 			children = (
-				4C31B1F922106ED900D58FE3 /* Repositories */,
-				4C97FFD4220F82010044DDD2 /* Models */,
-				4C97FFC4220F7FF20044DDD2 /* Cells */,
+				4CEF29F7221262C600443F1E /* Screens */,
 				4C97FFBE220F7E570044DDD2 /* Coordinators */,
-				4C97FFC1220F7E820044DDD2 /* PaymentsViewController.swift */,
-				4C97FFCE220F81190044DDD2 /* PaymentsViewModel.swift */,
 			);
 			path = Payments;
 			sourceTree = "<group>";
@@ -674,6 +666,38 @@
 				4CEF29F02212579400443F1E /* SetPaymentCardViewModelTests.swift */,
 			);
 			path = SetPaymentCard;
+			sourceTree = "<group>";
+		};
+		4CEF29F7221262C600443F1E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B200221083FA00D58FE3 /* DetailPayment */,
+				4CEF29F8221262CC00443F1E /* PaymentList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4CEF29F8221262CC00443F1E /* PaymentList */ = {
+			isa = PBXGroup;
+			children = (
+				4C31B1F922106ED900D58FE3 /* Repositories */,
+				4C97FFD4220F82010044DDD2 /* Models */,
+				4C97FFC4220F7FF20044DDD2 /* Cells */,
+				4C97FFC1220F7E820044DDD2 /* PaymentsViewController.swift */,
+				4C97FFCE220F81190044DDD2 /* PaymentsViewModel.swift */,
+			);
+			path = PaymentList;
+			sourceTree = "<group>";
+		};
+		4CEF29F9221262FE00443F1E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4C97FFC3220F7F870044DDD2 /* SetAmount */,
+				4C31B19D220F948300D58FE3 /* SetPaymentCard */,
+				4C31B1CB220FBE3100D58FE3 /* SetBank */,
+				4C31B1D92210545500D58FE3 /* SetInstallments */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		6D152C0DC13BEC2CEA78C3E9 /* Pods */ = {
