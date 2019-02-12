@@ -433,7 +433,6 @@
 				4C97FF9F220F78E60044DDD2 /* Coordinators */,
 				4C31B1A2220FA77700D58FE3 /* Networking */,
 				4C31B1EE22106B5700D58FE3 /* Persistence */,
-				4C31B1F922106ED900D58FE3 /* Repositories */,
 				4C97FFA7220F79590044DDD2 /* View */,
 				4C97FF8C220F77F50044DDD2 /* AppDelegate.swift */,
 				4C97FF98220F77F60044DDD2 /* Info.plist */,
@@ -525,6 +524,7 @@
 		4C97FFBD220F7E500044DDD2 /* Payments */ = {
 			isa = PBXGroup;
 			children = (
+				4C31B1F922106ED900D58FE3 /* Repositories */,
 				4C97FFD4220F82010044DDD2 /* Models */,
 				4C97FFC4220F7FF20044DDD2 /* Cells */,
 				4C97FFBE220F7E570044DDD2 /* Coordinators */,
