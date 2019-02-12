@@ -87,6 +87,14 @@ extension DetailPaymentViewController: UITableViewDelegate {
         return 60
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = viewModel.item(in: indexPath.section)
+        switch item.category {
+        case .paymentMethod, .bank: tableView.deselectRow(at: indexPath, animated: false)
+        default: break
+        }
+    }
+    
 }
 
 // MARK: - UITableViewDataSource
